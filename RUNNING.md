@@ -57,6 +57,22 @@ the same seed can get different numbers, because different hardware does the
 arithmetic in a slightly different order. Unit 6 asks you to report it beside
 your three seeds, and `results.json` records it for you.
 
+### Using an NVIDIA GPU on Windows
+
+The notebook detects CUDA automatically, but `pip install -r requirements.txt`
+may install a CPU-only PyTorch build. If you have an NVIDIA GPU and the notebook
+reports `cpu`, use the official [PyTorch install selector](https://pytorch.org/get-started/locally/)
+to choose Windows, Pip, Python, and a CUDA compute platform. Run its generated
+command in this project's activated `.venv`; you do not need the full CUDA
+Toolkit. Then verify the environment:
+
+```powershell
+python -c "import torch; print(torch.__version__); print('CUDA build:', torch.version.cuda); print('CUDA available:', torch.cuda.is_available())"
+```
+
+`CUDA available` should be `True`. Restart the notebook kernel and rerun setup
+so its device detection uses the updated PyTorch installation.
+
 ---
 
 ## The notebook

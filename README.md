@@ -137,11 +137,11 @@ Say so plainly — the disclosure is required, not penalised. -->
 
 <!-- Your starting model, your settings, and anything you changed and why. -->
 
-**Base model:**
+**Base model:** `distilbert-base-uncased`
 
-**Settings:** <!-- epochs, learning rate, batch size, seed -->
+**Settings:** 3 epochs, learning rate `2e-5`, batch size 8, max length 256 tokens, seed 42
 
-**Anything I changed from the defaults, and why:**
+**Anything I changed from the defaults, and why:** I raised `MAX_LENGTH` from 128 to 256 to retain more of the longer text posts in the input. I reduced `BATCH_SIZE` from 16 to 8 to use less memory with the 256-token inputs on my 8 GB RTX 3060 Ti. I installed CUDA-enabled PyTorch `2.14.1+cu126`; `python test.py` confirms CUDA detection on my NVIDIA GeForce RTX 3060 Ti.
 
 **Split sizes:** <!-- train / val / test, and per-label counts in the test
 split. If a label had fewer than about 8 in test, say so — it explains a lot

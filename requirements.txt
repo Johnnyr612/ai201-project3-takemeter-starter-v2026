@@ -19,9 +19,10 @@ transformers>=4.44,<5.0
 datasets>=2.20,<4.0
 accelerate>=0.30,<2.0
 
-# transformers needs a backend. CPU-only is fine: this dataset is small enough
-# that a full three-seed run is minutes. If your machine has an NVIDIA GPU or
-# Apple Silicon, the notebook finds and uses it on its own.
+# transformers needs a backend. The standard install works on CPU; NVIDIA GPU
+# users may need to install a CUDA-enabled PyTorch build separately (see
+# RUNNING.md). The notebook automatically selects CUDA or Apple Silicon MPS when
+# the installed PyTorch build exposes that device.
 torch>=2.2,<3.0
 
 # Scoring the baseline
