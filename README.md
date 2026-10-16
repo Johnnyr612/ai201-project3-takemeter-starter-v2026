@@ -191,6 +191,18 @@ row's `note` retains its original annotation and marks that review.
 split. If a label had fewer than about 8 in test, say so — it explains a lot
 of next unit's variance. -->
 
+Stratified 70/15/15 split with seed 42: **train 139 · val 31 · test 30**.
+
+| Label | Train | Val | Test |
+|---|---|---|---|
+| `scenario` | 30 | 7 | 7 |
+| `mechanism` | 53 | 12 | 11 |
+| `claim_check` | 37 | 8 | 8 |
+| `guidance_request` | 19 | 4 | 4 |
+
+`scenario` (7) and `guidance_request` (4) have fewer than 8 test examples, so
+their per-label metrics will move a lot between seeds. One `guidance_request`
+post changes that label's recall by 25 points.
 
 
 ---
