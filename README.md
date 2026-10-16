@@ -144,6 +144,12 @@ row's `note` retains its original annotation and marks that review.
 | `guidance_request` | 27 | 13.5% |
 | **Total** | **200** | **100%** |
 
+**Planned expansion:** I expect to label about 200 more r/AskPhysics posts in
+the future, roughly doubling the dataset. More training examples should help
+the model learn the smaller labels. A larger test split would also make
+results vary less between seeds, especially for `guidance_request`, which
+currently has only 4 test examples.
+
 **Three hard cases**
 
 <!-- Any post that made you pause: what it was, which two labels it could have
