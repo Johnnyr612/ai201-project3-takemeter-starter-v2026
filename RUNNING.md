@@ -73,6 +73,20 @@ python -c "import torch; print(torch.__version__); print('CUDA build:', torch.ve
 `CUDA available` should be `True`. Restart the notebook kernel and rerun setup
 so its device detection uses the updated PyTorch installation.
 
+### Preparing `labels.csv`
+
+Milestone 4 asks for at least 200 whole public submission posts in one unsplit
+`labels.csv`; it does not ask for comments or replies. Gather and label posts
+according to the milestone instructions. The optional
+[`collect_askphysics_sources.js`](collect_askphysics_sources.js) helper
+uses Reddit's public JSON listings to download 200 non-ad, non-stickied text
+submissions as `labels.csv` (title and whole body in `text`, blank `label` and
+`note`), plus `askphysics_source_queue.csv` with each post's URL in the same
+order. Run it in the DevTools Console on www.reddit.com, move `labels.csv`
+into the repo, and fill in the labels. Label the first 20 posts cold yourself and
+mark them `cold`; mark any AI-prelabelled rows in `note` and review every
+label.
+
 ---
 
 ## The notebook

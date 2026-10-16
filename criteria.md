@@ -4,16 +4,18 @@ Five criteria that say what "working" means for this classifier, written in
 unit 5 **before** anything was trained.
 
 **All five are yours this time.** None are given. You've had two projects of
-practice.
+practice. These criteria were updated before training when the taxonomy was
+expanded from three labels to four.
 
 An acceptance criterion names a number. *"The model is accurate"* is an
 opinion. *"Every label has an F1 of at least 0.60 on the held-out set"* is a
 criterion.
 
 Under each, write a sentence or two on **why that number**. A reason that says
-something about your data or your taxonomy earns credit — *"I picked 0.60 F1
-for `reaction` because it's my smallest label and I only have about 50
-examples of it"*. A reason that could be attached to any project does not.
+something about your data or your taxonomy earns credit — for example, a lower
+F1 floor for `guidance_request` because it has only 27 examples and about four
+will land in the test split. A reason that could be attached to any project
+does not.
 
 > Missing your own targets next unit costs you nothing. Setting a target so
 > easy you can't miss it does.
@@ -22,8 +24,8 @@ examples of it"*. A reason that could be attached to any project does not.
 
 ## Pick numbers you can defend
 
-Not numbers that sound impressive. Three labels means a coin-flip guesser gets
-about 33%, so a target of 0.40 is barely a target. Your number should sit
+Not numbers that sound impressive. Four labels means a balanced random guess
+gets about 25%, so a target of 0.40 is barely a target. Your number should sit
 somewhere you'd honestly call useful.
 
 **Cover at least three of these five areas.** They're here as prompts, not as a
@@ -41,9 +43,9 @@ number.
 Two things worth knowing before you pick numbers, because both will affect
 whether you hit them:
 
-- **Your smallest label will have the jumpiest score.** If a label has 50
-  examples, about 8 land in the test split. An F1 computed on 8 examples moves
-  a lot between seeds. A target for that label should be looser than one for
+- **Your smallest label will have the jumpiest score.** `guidance_request` has
+  27 examples, so about 4 land in a 15% test split. An F1 computed on so few
+  examples moves a lot between seeds. Its target should be looser than one for
   your biggest label, and saying so is a good reason.
 - **Unit 6 tests across three seeds, and the target has to hold across all
   three.** A target of 0.65 against results of 0.71, 0.62, 0.68 is a **miss**.
@@ -53,11 +55,11 @@ whether you hit them:
 
 ## 1.
 
-<!-- Your criterion. It must name a number. -->
+Across each of the three seeds, held-out overall accuracy is at least 0.55.
 
 
 
-**Why this target:**
+**Why this target:** With four labels, a balanced random guess is near 0.25 accuracy. A 0.55 target is a clear improvement while allowing for overlap between question intents and the smaller `guidance_request` class. Requiring it on every seed avoids calling a lucky split a success.
 
 
 
@@ -65,11 +67,11 @@ whether you hit them:
 
 ## 2.
 
-<!-- Your criterion. -->
+Across each of the three seeds, macro F1 is at least 0.50.
 
 
 
-**Why this target:**
+**Why this target:** Macro F1 gives each label equal weight, so a large label cannot hide poor performance on a smaller one. I set it below the accuracy target because the four categories are not equally common and `guidance_request` has fewer examples.
 
 
 
@@ -77,11 +79,11 @@ whether you hit them:
 
 ## 3.
 
-<!-- Your criterion. -->
+Across each of the three seeds, F1 is at least 0.45 for `scenario`, `mechanism`, and `claim_check`, and at least 0.30 for `guidance_request`.
 
 
 
-**Why this target:**
+**Why this target:** Each category needs to contribute useful predictions, not just inflate an aggregate score. `guidance_request` has only 27 examples, so roughly four land in a 15% test split; its lower threshold acknowledges that very small support makes F1 jumpy across seeds.
 
 
 
@@ -89,11 +91,11 @@ whether you hit them:
 
 ## 4.
 
-<!-- Your criterion. -->
+In my 200-post dataset, each label makes up at least 10% and no more than 50% of all labeled posts.
 
 
 
-**Why this target:**
+**Why this target:** If a label is too rare, the model will have few examples to learn from and very few in the test split; if one label dominates, overall accuracy can look good while the model neglects the others. I set a 10% floor for the narrower `guidance_request` class, which still requires at least 20 examples in this 200-post dataset; the current 27 examples clear it.
 
 
 
@@ -101,11 +103,11 @@ whether you hit them:
 
 ## 5.
 
-<!-- Your criterion. -->
+Across each of the three seeds, accuracy on the model's most-confident third of held-out posts is at least 0.60 and is at least 0.10 higher than accuracy on its least-confident third.
 
 
 
-**Why this target:**
+**Why this target:** A useful confidence score should identify a group of predictions that is more reliable than the model's least-sure predictions. The test split is small, so the 0.10 gap is a modest but checkable improvement; requiring at least 0.60 accuracy in the most-confident group keeps that improvement from being meaningful only in relative terms.
 
 
 

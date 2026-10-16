@@ -39,10 +39,10 @@
 
 ## What This Does
 
-<!-- Your community, and what your classifier sorts posts into. Three or four
-     sentences. -->
-
-
+This project uses public text submissions from r/AskPhysics. The classifier
+sorts each submission by its main intent: exploring a scenario, understanding
+a physical mechanism, checking a claim, or asking the community for practical
+guidance. Each example's `text` field contains the post title and body together.
 
 ---
 
@@ -54,35 +54,67 @@
      The decision rule is worth a point on its own and it's the thing most
      people leave out. Every taxonomy has a hardest boundary. Name yours. -->
 
-### `label_one`
+### `scenario`
 
-**Definition:**
-
-**Example 1:**
->
-
-**Example 2:**
->
-
-### `label_two`
-
-**Definition:**
+**Definition:** Asks what would happen in a specific hypothetical or applied
+physical situation.
 
 **Example 1:**
->
+> "In zero gravity, liquids create a sphere. If a small cube suddenly appeared
+> with the mass of the Earth, would the cube act like a magnet?"
 
 **Example 2:**
->
+> "Could a hollow black hole or neutron sphere exist, and if so, what would be
+> interesting or useful about it?"
 
-### The hardest boundary
+### `mechanism`
 
-**Which two labels:**
+**Definition:** Asks how or why a known physical phenomenon or concept works.
 
-**The decision rule I used every time:**
-<!-- e.g. "If the post names a specific checkable fact, it's `analysis`, even
-     if the tone is heated." -->
+**Example 1:**
+> "How can it be true that gravity and light in a vacuum travel at the same
+> speed if gravity can affect and consume light?"
 
+**Example 2:**
+> "How does the hydrogen 21cm spin-flip transition happen?"
 
+### `claim_check`
+
+**Definition:** Asks whether a specific physics claim, explanation, or line of
+reasoning is correct.
+
+**Example 1:**
+> "I think one part of The Speed of Light just clicked for me, but I still
+> can't wrap my head around the other."
+
+**Example 2:**
+> "Are position eigenstates actually genuine (non-normal) states in the
+> algebraic quantum framework?"
+
+### `guidance_request`
+
+**Definition:** Asks for recommendations, resources, advice, or practical help
+with learning, a project, or a career, rather than primarily asking for a
+physics explanation or claim check.
+
+**Example 1:**
+> "Physics project"
+
+**Example 2:**
+> "How to study physics"
+
+### Boundary rules
+
+**Hardest boundary — `mechanism` vs `claim_check`:** If the post asks whether
+its own or someone else's specific explanation or claim is correct, use
+`claim_check`. If it asks how or why the physics works without making
+correctness of a stated claim the central question, use `mechanism`.
+
+For `guidance_request`, label the post by its main requested outcome: advice,
+learning resources, or practical direction belongs to `guidance_request`;
+asking for the physics concept itself to be explained belongs to `mechanism`.
+For an explicit what-if setup, use `scenario`. If a post genuinely straddles
+two categories, use the category that best matches its main question.
 
 ---
 
@@ -91,19 +123,26 @@
 <!-- Where you collected from, how you labelled, your counts, and three hard
      cases. -->
 
-**Where the posts came from:**
+**Where the posts came from:** Public text submissions from the r/AskPhysics
+feed. Each `text` value combines the submission title and full body; comments
+and replies are excluded.
 
-**How I labelled them:** <!-- Cold first? Pre-labelled with AI and corrected?
-Say so plainly — the disclosure is required, not penalised. -->
+**How I labelled them:** 20 posts were labelled cold before using AI. The
+remaining 180 were initially AI-pre-labelled. After adding `guidance_request`,
+27 AI-pre-labelled examples were moved from the original three categories to
+that label; their `note` values record the reclassification. I reviewed and
+approved all 180 AI-assisted labels against the written rules. Each AI-assisted
+row's `note` retains its original annotation and marks that review.
 
 **Counts per label:**
 
 | Label | Count | Share |
 |---|---|---|
-|  |  |  |
-|  |  |  |
-|  |  |  |
-| **Total** |  | 100% |
+| `scenario` | 44 | 22.0% |
+| `mechanism` | 76 | 38.0% |
+| `claim_check` | 53 | 26.5% |
+| `guidance_request` | 27 | 13.5% |
+| **Total** | **200** | **100%** |
 
 **Three hard cases**
 
@@ -111,25 +150,30 @@ Say so plainly — the disclosure is required, not penalised. -->
      been, and what you chose. These are worth more than the easy 190. -->
 
 **1.**
-> *The post:*
+> *The post:* "I think one part of The Speed of Light just clicked for me, but
+> I still can't wrap my head around the other."
 >
-> *Could have been:*
+> *Could have been:* `claim_check` or `mechanism`
 >
-> *I chose, because:*
+> *I chose, because:* `claim_check` — the writer asks readers to correct a
+> proposed explanation, so correctness of a stated claim is central.
 
 **2.**
-> *The post:*
+> *The post:* "How can it be true that gravity and light in a vacuum travel at
+> the same speed if gravity can affect and consume light?"
 >
-> *Could have been:*
+> *Could have been:* `mechanism` or `claim_check`
 >
-> *I chose, because:*
+> *I chose, because:* `mechanism` — it asks how the relationship works; it
+> does not primarily ask readers to judge a proposed explanation as correct.
 
 **3.**
-> *The post:*
+> *The post:* "Settle a bet: How quickly does heat escape from open oven"
 >
-> *Could have been:*
+> *Could have been:* `claim_check` or `scenario`
 >
-> *I chose, because:*
+> *I chose, because:* `claim_check` — it asks readers to resolve a concrete
+> disagreement about an observed situation, rather than posing a hypothetical.
 
 ---
 
@@ -162,17 +206,26 @@ of next unit's variance. -->
 
 **Moment 1**
 
-- *What I asked for:*
-- *What came back:*
-- *What I changed:*
+- *What I asked for:* Help identifying a fourth label for the kinds of
+  r/AskPhysics posts that did not fit the original three intent labels.
+- *What came back:* `guidance_request` for posts asking for study resources,
+  project/career advice, or other practical direction.
+- *What I changed:* Added that label and moved 27 AI-prelabelled rows into it;
+  I reviewed and approved each changed row against the definition.
 
 **Moment 2**
 
-- *What I asked for:*
-- *What came back:*
-- *What I changed:*
+- *What I asked for:* Help reviewing borderline labels and setting measurable
+  criteria for the four-label dataset.
+- *What came back:* Suggested boundaries between `guidance_request` and
+  physics-explanation labels, plus adjusted class-balance and F1 targets for
+  the smaller fourth class.
+- *What I changed:* Wrote the boundary rules and revised `criteria.md` before
+  training; I reviewed the AI-assisted labels against those rules.
 
-**Pre-labelling disclosure:**
+**Pre-labelling disclosure:** 180 posts were initially pre-labelled with AI.
+I reviewed and approved all 180 labels before training. The original AI
+annotation notes and the review status are recorded in `labels.csv`.
 
 <!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════
 
@@ -190,8 +243,10 @@ of next unit's variance. -->
 |---|---|---|---|
 | Overall accuracy |  |  |  |
 | Macro F1 |  |  |  |
-| F1 — `label_one` |  |  |  |
-| F1 — `label_two` |  |  |  |
+| F1 — `scenario` |  |  |  |
+| F1 — `mechanism` |  |  |  |
+| F1 — `claim_check` |  |  |  |
+| F1 — `guidance_request` |  |  |  |
 
 **What I predicted before I looked:**
 <!-- Milestone 1 asks you to write this BEFORE seeing the trained numbers. A
