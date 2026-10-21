@@ -282,6 +282,14 @@ that left its `scenario` and `claim_check` F1 at zero. On this small test set,
 fine-tuning did not improve overall performance, though more evaluation would
 be needed before generalizing beyond these posts.
 
+As a prompt check, I also ran the baseline on these same 30 posts without
+`label_definitions.txt`, using bare label names. Accuracy was 0.333 and macro
+F1 was 0.308, compared with 0.667 and 0.534 using the definitions. On this
+sample, the definitions improved accuracy by 0.334 and macro F1 by 0.226.
+The bare-label run is not the primary baseline comparison; it measures the
+effect of removing the definitions. Its results are saved in
+`baseline_bare_labels_results.json`.
+
 ---
 
 ## Run Log — Before
