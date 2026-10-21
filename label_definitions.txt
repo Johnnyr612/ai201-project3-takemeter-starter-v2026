@@ -3,7 +3,7 @@
 # Copy these from your README so the baseline is judged on exactly the
 # definitions you wrote. baseline.py reads this file.
 
-scenario: asks what would happen in a specific hypothetical or applied situation
-mechanism: asks how or why a known phenomenon or concept works
-claim_check: asks whether a specific claim, idea, or line of reasoning (their own or one they heard) is correct
-guidance_request: asks for advice, recommendations, resources, or practical help with learning, a project, or a career rather than primarily asking for a physics explanation or claim check
+scenario: asks what would happen in a specific hypothetical or applied physical situation
+mechanism: asks how or why a known physical phenomenon or concept works
+claim_check: asks whether a specific physics claim, explanation, or line of reasoning is correct
+guidance_request: asks for recommendations, resources, advice, or practical help with learning, a project, or a career, rather than primarily asking for a physics explanation or claim check

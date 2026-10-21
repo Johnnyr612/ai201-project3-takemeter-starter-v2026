@@ -259,22 +259,28 @@ annotation notes and the review status are recorded in `labels.csv`.
 
 | Measure | Baseline | Trained | Difference |
 |---|---|---|---|
-| Overall accuracy |  |  |  |
-| Macro F1 |  |  |  |
-| F1 — `scenario` |  |  |  |
-| F1 — `mechanism` |  |  |  |
-| F1 — `claim_check` |  |  |  |
-| F1 — `guidance_request` |  |  |  |
+| Overall accuracy | 0.667 | 0.400 | -0.267 |
+| Macro F1 | 0.534 | 0.238 | -0.297 |
+| F1 — `scenario` | 0.750 | 0.000 | -0.750 |
+| F1 — `mechanism` | 0.720 | 0.550 | -0.170 |
+| F1 — `claim_check` | 0.667 | 0.000 | -0.667 |
+| F1 — `guidance_request` | 0.000 | 0.400 | +0.400 |
 
 **What I predicted before I looked:**
-<!-- Milestone 1 asks you to write this BEFORE seeing the trained numbers. A
-     prediction made afterwards isn't one. -->
+I expected the trained model to improve F1 on `claim_check` and
+`guidance_request`, where learning from labelled examples could help it
+distinguish those intents. This sentence is being recorded after the trained
+results were already shared, so it is a retrospective prediction, not a valid
+before-looking prediction.
 
 **What the gap actually means:**
-<!-- If the baseline matched your trained model, your fine-tuning added
-     nothing — and that is a real finding, not a failure. Say it plainly. -->
-
-
+On the same 30 held-out posts, the zero-shot baseline scored higher overall
+(0.667 accuracy and 0.534 macro F1) than the trained model (0.400 and 0.238).
+The trained model correctly identified some `guidance_request` posts, where
+the baseline scored zero F1, but it predicted `mechanism` for 29 of 30 posts;
+that left its `scenario` and `claim_check` F1 at zero. On this small test set,
+fine-tuning did not improve overall performance, though more evaluation would
+be needed before generalizing beyond these posts.
 
 ---
 

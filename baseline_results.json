@@ -1,0 +1,190 @@
+{
+  "model": "facebook/bart-large-mnli",
+  "n": 30,
+  "seed": 42,
+  "held_out": true,
+  "used_definitions": true,
+  "scores": {
+    "n": 30,
+    "accuracy": 0.6666666666666666,
+    "f1_macro": 0.5341666666666667,
+    "per_label": {
+      "claim_check": {
+        "precision": 0.7142857142857143,
+        "recall": 0.625,
+        "f1": 0.6666666666666666,
+        "support": 8
+      },
+      "guidance_request": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 4
+      },
+      "mechanism": {
+        "precision": 0.6428571428571429,
+        "recall": 0.8181818181818182,
+        "f1": 0.7200000000000001,
+        "support": 11
+      },
+      "scenario": {
+        "precision": 0.6666666666666666,
+        "recall": 0.8571428571428571,
+        "f1": 0.75,
+        "support": 7
+      }
+    }
+  },
+  "predictions": [
+    {
+      "text": "What things might be better made in 0g?\n\nSome examples are certain crystal structures, biomanufacturing, etc. Are there any outlandish things you can think of?",
+      "gold": "guidance_request",
+      "predicted": "scenario"
+    },
+    {
+      "text": "In an expanding universe is more space being created, or is finite space being stretched?\n\nFirst Reddit post!\n\nThis question has bugged me as an armchair cosmologist.  When physicists say the universe is expanding does it mean that \"space\" is being stretched, but there is still only so much of it, or is more space being created?  I \\*think\\* this is ultimately a question about space either being discrete (like in loop quantum gravity) or being continuous (general relativity).  Or am I just misunderstanding the whole thing (probably).\n\nThanks!  :-)",
+      "gold": "mechanism",
+      "predicted": "scenario"
+    },
+    {
+      "text": "if i accelerated to the fastest speed possible in our universe at a black hole would i still be spaghettified? if yes, how?\n\nanother way to put it\nif two photons with a distance of 1 meter between them headed towards a black hole would the distance change as they enter it?",
+      "gold": "scenario",
+      "predicted": "scenario"
+    },
+    {
+      "text": "Calculus for physics\n\nHello!\n\nI apologise if it will sound a bit silly, but I would like to find some materials covering calculus applied for physics. I study engineering and the calculus we have been shown is very basic and in general not in depth at all, its just easier-ish functions (like integration of quadratic equations, some logarithms etc etc), so i understand only basics of calculus. But when it comes to physics, I can't help feeling like it's totally something else, all of a sudden we are playing only with letters and I just can't develop that intuition, you know something like when doing a problem I just can't come up with \"aha let's make a time derivative of this to get home!\" and when we are doing problems in class I can't figure out what is going on. And I don't mean to be insensitive, but this is my last semester of physics and I want to pass it, are there practical materials that could help me get that intuition?",
+      "gold": "guidance_request",
+      "predicted": "mechanism"
+    },
+    {
+      "text": "If light is both a particle and a wave\n\nSo has the properties of both that means they should have quantum properties...does that mean we should be able to look back at our.current position and see the past as we move through space? Or be able to measure past particle readings and see the wave form....i don't know...i may be drunk...",
+      "gold": "claim_check",
+      "predicted": "claim_check"
+    },
+    {
+      "text": "What physics principles should I consider when designing packaging to protect an egg from a fall?\n\nHi everyone. I'm working on a packaging project for my logistics engineering course, and I'm looking for some advice.\n\nI need to make packaging that can protect an egg from drops of different heights, while keeping it lightweight and cheap. Cardboard is one of the materials I'm considering, but I'm still figuring out how to approach the design.\n\nI'd like to learn more about what makes packaging effective at absorbing impacts, what materials or structures are worth looking into, and what mistakes to avoid.\n\nI'm not looking for a ready-made design, just some ideas and general advice to help me figure things out myself. Thanks!",
+      "gold": "guidance_request",
+      "predicted": "mechanism"
+    },
+    {
+      "text": "How do particle accelerators get particles?\n\nMaybe more of an engineering question than a phsyics one. I understand the acceleration part, charged particles and magnetic fields and all, but where would you get a singe (or i guess a few dozen) electrons or protons to accelerate in the first place?",
+      "gold": "mechanism",
+      "predicted": "mechanism"
+    },
+    {
+      "text": "What is the weight of the universe?\n\nCan we calculate the weight of the infinite universe?",
+      "gold": "mechanism",
+      "predicted": "mechanism"
+    },
+    {
+      "text": "Angular speeds of two points of a rigid body\n\nConsider a 2D rigid body moving on a plane, an inertial reference frame (not necessarily the CM frame) and two points of the rigid body p1 and p2 with non-zero, non-parallel velocities v1 and v2.\nConstruct the line passing through p1 and orthogonal to v1, and likewise for p2, and call the intersection point of these lines c. Call the distances from c to p1 and p2, respectively, d1 and d2. Define w1 := |v1|/d1 and w2 = |v2|/d2. Show that w1 = w2.\n\nMy attempt: from the condition that p1 and p2 belong to a rigid body, I can say that d/dt |r1 - r2| = 0, where r1 and r2 are the position vectors of p1 and p2 in our coordinate system. I can claim this from the definition of rigid body (distance between any pair of points remains constant). This implies:\n\n0 = d/dt |r1 - r2|\\^2 = d/dt (r1 - r2)\\^2 = 2(r1 - r2)\u2022(v1 - v2)\n\nso that (r1 - r2)\u2022(v1 - v2) = 0. (1)\n\nI also know that v1\u2022(r1 - rc) = 0 because by construction v1 is orthogonal to the line connecting p1 to c, and r1 - rc is parallel to that line. Likewise for p2. I can use this inside (1) if I take (1) and add and subtract rc like this:\n\n0 = (r1 - r2)\u2022(v1 - v2) = (r1 -rc +rc - r2)\u2022(v1 - v2) = -v2\u2022(r1 - rc) -v1\u2022(r2 - rc)\n\nSo that v1\u2022(r2 - rc) = -v2\u2022(r1 - rc)\n\nBy taking the absolute value of both sides, this implies\n\n|v1| d2 |cos(alpha)| = |v2| d1 |cos(beta)|\n\nWhere alpha is (one of the) angles formed by v1 and the line from p2 to c and beta is (one of the) angles formed by v2 and the line from p1 to c.\n\nRearranging\n\nw1 |cos(alpha)| = w2 |cos(beta)|\n\nThis is almost the desired result if I manage to show that |cos(alpha)| = |cos(beta)|. How can I show this? I\u2019m stuck here.\n\nThanks to anyone who helps!",
+      "gold": "claim_check",
+      "predicted": "claim_check"
+    },
+    {
+      "text": "Does Hydrostatic law apply?\n\nConsider a three fluid triple u tube manometer.\n\nDraw a horizontal line intersecting all tubing. Is the pressure the same at all these points, even if they are differnet fluids??\n\nOr is the hydrostatic law only applicable within a given fluid/fluid barrier?",
+      "gold": "mechanism",
+      "predicted": "claim_check"
+    },
+    {
+      "text": "How do solutions change evaporation rates\n\nI have been trying to figure out a dynamic of changing the evaporation rate of water.\n\nHow is it that w solution of water and ethanol or water and acetone are able to cause water to increase its rate of evaporation?",
+      "gold": "mechanism",
+      "predicted": "mechanism"
+    },
+    {
+      "text": "Question about gravity and spacetime\n\nSo, from my understanding of time dilation, the reason why it occurs is that spacetime gets physically in the time dimension, causing your velocity C in said dimension to cover less \u201cdistance\u201d than it would without gravity, like if you had a football field where each yard line is one second and you made the yard lines further apart, causing the velocity to be less effective, and I was wondering if this was true for space as well, meaning if you were to apply energy to an object in a very low gravity environment (such as deep space), then apply the same amount to one in a high gravity environment where the pull wouldn\u2019t add to your velocity due to pulling you towards the planet, (such as being between two identical massive bodies along a line at which their gravitational pulls cancel out). would the high gravity environment lead to a decrease in velocity",
+      "gold": "claim_check",
+      "predicted": "mechanism"
+    },
+    {
+      "text": "Timetravel paradox question\n\nImagine going in a spacecraft at 99.99% the speed of light and the spacecrafts trajectory was a circle around the earth. You are doing this for five years. I dont know the maths but say 1000 years went on on earth during this trip.\n\nWould you from your spacecraft meassure that the earth that you\u2019ve been circling for 5 years has been circling the sun 5 or 1000 times? I mean when you slow down you will notice a 1000 years have passed but wouldnt you only experience 5 full orbits around the sun? When does the remainibg 995 orbits occur?",
+      "gold": "scenario",
+      "predicted": "scenario"
+    },
+    {
+      "text": "Could a hollow black hole or neutron sphere exist, and if so, what would be interesting or useful about it?\n\nSaw a Dust video today where a planet sized sphere was made (standalone, not a Dyson sphere that surrounds other astronomical objects). Made me wonder if an astronomical sized hollow sphere could be coerced into a hollow black hole, or maybe even a hollow neutron star.\n\nMaybe build the initial shell and then throw matter at it to slowly increase the mass. Hollow shell, or Gauss's theorem, would suggest the interior gravitational field is zero up to the inner surface, so the density increase with added mass would occur by the mass collapsing outwards. Start with a relatively small hollow sphere I guess. Or maybe throw a spherical array of neutron spheres or black holes at each other so that they collide around an open space.\n\nAnyway once a hollow sphere of neutron matter or black hole is achieved, there'd be zero gravitational field up to the inner surface (neutron or event horizon). If so, does that mean that an object on the interior experiences no general relativistic effects anywhere right up to the inner surface? I assume not. In that case we could sit right next to a black hole event horizon or neutron star surface without having to worry about falling in or aging at a different rate to our buddies elsewhere inside or at a sufficient distance outside.\n\nOf course inside and outside would be cut off from each other. However perhaps a pin hole could be part of the original construction. Presumably it would leave a near zero field that would enable travel and communication to and from the interior. Perhaps grab a pinch of neutron matter from the the interior surface, against negligible gravitational force, for study, or exit the pin hole and throw it into the outside surface, converting potential to kinetic energy and powering whatever is needed.\n\nAnyway just thinking aloud. Any thoughts?",
+      "gold": "scenario",
+      "predicted": "scenario"
+    },
+    {
+      "text": "Say 100 different thermometers to get to the real temperature?\n\nIf I buy lots of different thermometers - digital, analogue - and put them in a box in my kitchen will the average be fairly close to the true temperature? Or is the true temperature impossible to establish? The electronic ones may produce heat so what about if they are all analog - mercury and red fluid stuff?\n\nBecause currently I have about +/- 1.5 degrees C on various devices from Apple HomePods to dedicated electronic thermometers to mercury / red liquid wooden greenhouse thermometers.",
+      "gold": "scenario",
+      "predicted": "scenario"
+    },
+    {
+      "text": "Hi everyone\n\nI just graduated highschool I'm going med , dental or pharmacy school but i really really love physics so i want to continue studying it as a hobby. where do i start and how should i study? I'm more into studying through the source and without a notebook like I'd study the textbook and that's it i write my notes in it , I'm not a fan of being tutored i like reading and understanding things myself but i can still need help , so pls give me some good advice \ud83d\ude4f\ud83c\udffb\ud83d\ude4f\ud83c\udffb",
+      "gold": "guidance_request",
+      "predicted": "mechanism"
+    },
+    {
+      "text": "How come two fundamental forces be combined in the early stages of universe?\n\nPlease explain in simple ways what does it mean for the fundamental forces to be combined into one single force. For instance, we've evidence that there was a unified electroweak force which break into electromagnetism and weak force via the electroweak symmetry breaking. Would like to know it in layman's and rigorous terms.",
+      "gold": "mechanism",
+      "predicted": "mechanism"
+    },
+    {
+      "text": "Electrons orbit the nucleus, atoms form compounds, and then those compounds dissociate; this process repeats countless times with various atoms, yet the electrons do not scatter or crash into the nucleus. (In some atoms, there are 118 electrons around the nucleus.)\n\nWhile placing an electron into orbit around a nucleus and keeping it there is an incredibly difficult task, atoms accomplish it with great ease. How does this happen? Could you explain the mechanism behind it?",
+      "gold": "mechanism",
+      "predicted": "mechanism"
+    },
+    {
+      "text": "Are radio waves truly moving and shaped like waves?\n\nI just recently learned that radio waves are moving at the speed of light, and was wondering how that is possible if they are wave like?",
+      "gold": "mechanism",
+      "predicted": "mechanism"
+    },
+    {
+      "text": "Is This Why Binding Particles Release Energy?\n\nConsider two particles moving towards each other. If they have mass, then they have some kinetic energy. They have 0 potential energy relative to a point in infinity (nuclear potential energy if they're nucleons and chemical potential energy if they're atoms).\n\nIf we assume they're moving with some constant velocity (so that we do no work on this system), then \u2013 at some distance \u2013 the particles will exert attractive forces with each other. By conservation of energy, this increases their kinetic energies and decreases their potential energy by the same amount.\n\nAs they're brought to rest or slowed down (either due to repulsive nuclear or eletcrostatic forces) they bind, and so both their kinetic energues and potential energy are less than in the beginning. This means that they released the energy by conservation.",
+      "gold": "claim_check",
+      "predicted": "mechanism"
+    },
+    {
+      "text": "Questions about gravitons and why quantum gravity is needed\n\nI'm an undergraduate physics student, and I'm trying to get a clearer conceptual picture of gravitons and quantum gravity. I have three related questions:\n\n1. As I understand it, the graviton is currently a hypothetical particle related to attempts to reconcile quantum mechanics with general relativity and develop a theory of quantum gravity. Is this roughly correct?\n\n2. I vaguely remember that in general relativity, spacetime is not a fixed stage: matter curves spacetime, and spacetime affects the motion of matter. But in ordinary quantum mechanics and quantum field theory, spacetime is usually treated as a fixed background, where particles and fields exist and evolve without causing the background itself to change. Is this one of the reasons why reconciling quantum theory with general relativity is so difficult?\n\n3. I also wonder about the motivation for developing a theory of quantum gravity. Why isn't it enough to let quantum mechanics and general relativity work in their own domains? Why do physicists want to reconcile them? What makes this problem so important? If we eventually solved it, how would it change our understanding of fundamental physics?",
+      "gold": "claim_check",
+      "predicted": "claim_check"
+    },
+    {
+      "text": "Can someone explain to me the relationship between potential energy and conservative force(11th grade)\n\nI have tried reading the definition and listening to my teacher but still it just doesn't make sense to me",
+      "gold": "mechanism",
+      "predicted": "mechanism"
+    },
+    {
+      "text": "Does gyroscope precession in a gravitomagnetic field reverse if you change the gyro's spin direction?\n\nHi everyone.\n\nThere are a lot of conflicting answers online regarding this topic, so I'm looking for some clarity here.\n\nThe question: If a gyroscope is placed in a gravitomagnetic field, does the direction of its precession reverse if I change the rotation (spin direction) of the gyroscope itself?\n\nPlease keep it simple and avoid complex formulas\u2014just looking for a straightforward physics explanation. Thanks!\n\nJoerg\\_H\n\n*Posted on October 13, 2026, at 01:12 PM*",
+      "gold": "scenario",
+      "predicted": "claim_check"
+    },
+    {
+      "text": "Angular velocity of a 2D rigid body\n\nFor the planar motion of a rigid 2D body, is it true that the angular velocity in the Lab frame wrt the instantaneous center of rotation is always equal to the angular velocity in the CM frame wrt the center of mass?",
+      "gold": "claim_check",
+      "predicted": "claim_check"
+    },
+    {
+      "text": "Dark Energy\n\nHey everyone! I\u2019m sure this is a super naive question.\n\nMy YouTube/Undergraduate (decades now ago \ud83d\ude02) physics knowledge lets me know Dark Energy is the force that is pushing far away things. Galaxies/things we see far away, further and further away, are getting faster/speeding up.\n\nSo my problem in understanding\u2026this is light measured having been emitted many billions of years ago? Back when of course a giant event happened. Of course the further back you looked the faster things are going to look like. Of course the event was \u201cpushing\u201d things\u2026the earlier you looked the faster it will be.\n\nHow do we know/assume that\u2019s still happening?",
+      "gold": "claim_check",
+      "predicted": "claim_check"
+    },
+    {
+      "text": "Physics of a car breaking hard\n\nSo we have tires on a car rotating with the wheel, how come when a car of lets say almost 2 tons, going 100 mph slams on the breaks, and (for the purpose of discussion) we ignore the ABS, the wheels and tires lock up all together but the car still has inertia, other than friction what holds the tire around the wheel and how come the tire doesn't start rotating around the wheel due to the huge friction between the tire and the road?\n\nThe wheel is mechanically connected to the car but the tire is held to the wheel just with friction and a bit of elastic force around the wheel.\n\nSorry if the question isn't well formulated (English is not my first language), but I hope you can understand what I am trying to ask.\n\n\nThanks!",
+      "gold": "mechanism",
+      "predicted": "mechanism"
+    },
+    {
+      "text": "What is the ideal angle to throw an elastic chuckit ball for a dog, for it to go the maximum distance - including hopping?\n\nAssuming a flat surface, and reasonable parameters for elasticity and friction?\n\nAccording to my chatbot, there are two factors that already make the optimal angle lower than 45 degree, even before considering the \"hopping on\" effect:\nAir resistance, and the fact that I launch the ball above the ground. (In case there is one.)\n\nI am interested in the added effect of the hopping on.\n\nOn the one hand, making the horizontal component as strong as possible seems to be ideal for creating inertia in the right direction, and in my imagination might also potentially make the ball act a bit like a stone skipping across water, with less energy getting lost from compressing and decompressing? On the other hand, it makes it touch the ground much earlier, leading to earlier losses?\n\nEDIT:\nAsking as a layman.",
+      "gold": "scenario",
+      "predicted": "scenario"
+    },
+    {
+      "text": "Would spaceships travelling at the speed of light or faster leave contrail-like evidence of their movement through space?\n\nLooking up at the sky on a clear day and seeing contrails, it got me wondering. If travelling between the stars necessitates thrusting a vessel through space at light speed and beyond, then why don\u2019t we see contrail-like evidence of intergalactic travellers all over space the way we see contrails all over the sky due to air traffic? Granted the solution to intergalactic travel may not involve thrust at all, but let\u2019s say it does. What evidence would this form of travel leave in its wake?",
+      "gold": "scenario",
+      "predicted": "scenario"
+    },
+    {
+      "text": "Can Refractive index be less than 1 ?\n\nRefrective index is the measurement of optical density of a material and it is inversely proportional to the speed of light in that medium (n=c/v\\[absolute refrectiveindex\\]). Naturally in every medium refrective index is less than one but when i was researching i found that in specific, non-standard condition (not for visible light but for electromagnetic wave like xray)absolute refrective index can be less than 1. If one can explain how it is possible that electric and magnetic feild chwnge faster than light or how these emw can travel faster than light and do not disobey the relativity",
+      "gold": "mechanism",
+      "predicted": "mechanism"
+    },
+    {
+      "text": "Can soft-tissue deformation compromise the effectiveness of a roller coaster lap restraint even if the restraint remains mechanically locked?\n\nI\u2019ve been following the Goliath incident discussions, and my friend brought up a point that I\u2019m wondering whether we\u2019re overlooking something important.\n\nWhat if the issue isn\u2019t necessarily someone\u2019s weight, size, or even a mechanical failure of the restraint, but **how body fat moves under negative G-forces?**\n\nTwo people can weigh exactly the same but have very different body compositions. Adipose tissue (body fat) is compressible and deformable. It can shift relative to the skeleton under force.\n\nThink about breast tissue during roller coaster airtime. Even in a snug, supportive bra, breasts can lift and shift out of position. The bra hasn\u2019t failed or come undone. The tissue itself has moved.\n**Now apply that same principle to someone with substantial abdominal fat sitting beneath a clamshell lap restraint.**\n\nI\u2019ve also come across firsthand accounts from riders describing their stomachs moving upward or over their lap restraints during airtime. That caught my attention because it\u2019s the exact type of soft-tissue displacement I\u2019m questioning.\n\nCould abdominal fat compress beneath a restraint while seated, then shift upward during negative G-forces, changing how securely the restraint engages the pelvis?\n**In other words, could a restraint remain completely locked and mechanically functional while the rider\u2019s soft tissue shifts enough to compromise their positioning?**\nThere\u2019s scientific research on how abdominal fat affects seat belt engagement with the pelvic bones:\n[https://pmc.ncbi.nlm.nih.gov/articles/PMC9285376/](https://pmc.ncbi.nlm.nih.gov/articles/PMC9285376/)\n\nObviously, automotive seat belts and roller coaster restraints aren\u2019t identical, and I\u2019m not claiming this caused the Goliath incident.\n\nI\u2019m wondering whether we\u2019re focusing too much on weight limits and mechanical failures without adequately considering **body composition, soft-tissue deformation, and dynamic movement during airtime.**\nHas anyone seen research or engineering discussions addressing this?\n\n**Related firsthand rider experiences:**\nI verified two particularly relevant accounts:\n**1. CoasterBuzz:** A rider who described himself as 242 pounds with a 36.5-inch waist said strong airtime pushed his belly over the top of the lap bar.\n[Read the CoasterBuzz discussion](https://coasterbuzz.com/Forums/Topic/rmc-and-weight-loss-motivation)\u2060\n**2. Reddit,** [r/rollercoasters](applewebdata://2E719467-3DDC-458E-889A-8AF1CBBF6113/r/rollercoasters)**:** A rider described his stomach slipping from the restraint during negative G-forces, then coming back down. He said the experience was painful.",
+      "gold": "claim_check",
+      "predicted": "scenario"
+    }
+  ]
+}
