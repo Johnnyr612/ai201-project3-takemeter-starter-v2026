@@ -241,6 +241,25 @@ post changes that label's recall by 25 points.
 - *What I changed:* Wrote the boundary rules and revised `criteria.md` before
   training; I reviewed the AI-assisted labels against those rules.
 
+**Moment 3 (unit 6)**
+
+- *What I asked for:* Help with the unit 6 test: collecting and
+  pre-labelling more posts, labelling the staff set, and reading my run
+  results for patterns in the errors.
+- *What came back:* An AI assistant (Claude) spotted the patterns the
+  diagnoses rest on. The "stable" 3-point spread before the change came from
+  every seed collapsing to `mechanism`: 0.367 equals the `mechanism` share of
+  the test split, and validation accuracy was flat at 0.387 through training.
+  After the change, it noticed that no seed predicted `claim_check` even once.
+  It also wrote the collection and merge scripts, pre-labelled the 124 new
+  posts, produced `my_staff_labels.csv`, and drafted the unit 6 README
+  sections from the notebook output.
+- *What I changed:* I reviewed and approved the 124 new labels and the README
+  write-up before submitting. The assistant also flagged that a three-seed
+  "before" run I had re-run on the 324-post data had overwritten my original
+  before results. I restored the 200-post data and re-ran it, so the before
+  log reflects the original dataset.
+
 **Pre-labelling disclosure:** 180 posts were initially pre-labelled with AI.
 I reviewed and approved all 180 labels before training. The original AI
 annotation notes and the review status are recorded in `labels.csv`. In
@@ -269,6 +288,11 @@ me; see The Improvement.
 | F1 — `mechanism` | 0.720 | 0.550 | -0.170 |
 | F1 — `claim_check` | 0.667 | 0.000 | -0.667 |
 | F1 — `guidance_request` | 0.000 | 0.400 | +0.400 |
+
+Both columns are scored on the same 30 held-out posts: the seed-42 test split
+from the original 200-post dataset. "Trained" is the model from before the
+improvement. The committed `test_split.csv` now holds the 49-post split from
+the after run, so re-running `baseline.py` today scores different posts.
 
 **What I predicted before I looked:**
 I expected the trained model to improve F1 on `claim_check` and
@@ -308,6 +332,9 @@ effect of removing the definitions. Its results are saved in
 | 3. Per-label F1 (S/M/C >= 0.45; G >= 0.30) | All label floors each seed | S 0.000; M 0.550; C 0.000; G 0.400 | S 0.000; M 0.537; C 0.000; G 0.000 | S 0.000; M 0.537; C 0.000; G 0.000 | MISSED |
 | 4. Label balance in 200 posts | Each label 10%-50% | S 22%; M 38%; C 26.5%; G 13.5% | Same dataset | Same dataset | MET |
 | 5. Confidence accuracy (top/low third; gap) | Top >= 0.60 and gap >= 0.10 each seed | 0.600 / 0.300; +0.300 | 0.600 / 0.000; +0.600 | 0.600 / 0.100; +0.500 | MET |
+
+**Device:** `cuda` (NVIDIA GeForce RTX 3060 Ti, PyTorch `2.14.1+cu126`) for
+all three seeds, as recorded in `results_three_seeds_before.json`.
 
 Accuracy ranged from 0.367 to 0.400, a spread of 0.033 (3.3 percentage
 points), which is below the 0.10 instability threshold. That stability is
@@ -525,6 +552,9 @@ to make.
 | 4. Label balance (now 324 posts) | Each label 10%-50% | S 24.7%; M 35.2%; C 24.4%; G 15.7% | Same dataset | Same dataset | MET |
 | 5. Confidence accuracy (top/low third; gap) | Top >= 0.60 and gap >= 0.10 each seed | 0.625 / 0.500; +0.125 | 0.625 / 0.188; +0.437 | 0.750 / 0.438; +0.312 | MET |
 
+**Device:** `cuda` (NVIDIA GeForce RTX 3060 Ti, PyTorch `2.14.1+cu126`) for
+all three seeds, as recorded in `results_three_seeds_after.json`.
+
 Criterion 4's original wording names a 200-post dataset. I applied the same
 10%–50% range to the 324-post dataset the after run trained on; the original
 200 posts also met it (see Run Log — Before).
@@ -592,11 +622,43 @@ change helped.
 
 <!-- For each criterion still missed: what you'd do, and why you stopped. -->
 
+**Criterion 3 — per-label F1 (`claim_check` 0.000 on every seed, before and
+after).**
+*What I'd do:* relabel the `mechanism` vs `claim_check` boundary. Adding 26
+`claim_check` examples changed nothing, so the problem is the boundary, not
+the count. I would rewrite the rule as one observable test, the way the staff
+rule 1 asks "is the fact load-bearing": label `claim_check` only if the post
+states its own explanation or a quoted claim and asks whether it is right;
+otherwise `mechanism`. Then I would re-check every `claim_check` row and every
+`mechanism` row whose note says "borderline with claim_check", and record how
+many changed. I would also label a sample of my own posts a second time, by
+hand, to get the self-consistency evidence the AI-labelled staff check could
+not give me.
+*Why I stopped:* the milestone allows one change per run, and I used it on
+the data problem my diagnosis named first. Relabelling is the next change,
+not part of this one.
 
+**Criteria 1 and 2 — accuracy and macro F1 (seed 7: 0.429 and 0.262).**
+*What I'd do:* train for more epochs, keeping everything else the same.
+Validation accuracy was still rising at epoch 3 on every seed after the data
+change (seed 7: 0.347 → 0.367 → 0.510), so the model stopped while it was
+still learning, and seed 7, the slowest learner, is the one that missed.
+*Why I stopped:* that would be a second change in the same run, and I could
+not tell its effect apart from the added data. With 49 test posts, these
+numbers would also stay noisy across seeds (an 18-point accuracy spread now),
+so more data would still be needed for a stable measure.
 
 **The gap between what I meant my labels to capture and what the model
 learned:**
 <!-- Two sentences. Your confusion matrix is the evidence. -->
+
+I meant `claim_check` to capture a post asking whether a stated claim or
+explanation is right, but the model treats those posts as ordinary physics
+questions: on seed 42, 11 of 12 `claim_check` posts went to `mechanism`, and
+no seed ever predicted `claim_check`. What it did learn are the labels with
+distinct surface wording, `guidance_request` (6 of 8 right) and `scenario`
+(5 of 12), which suggests it learned vocabulary like "textbook", "career" and
+"what if" rather than the intent behind a question.
 
 
 
