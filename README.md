@@ -245,7 +245,9 @@ post changes that label's recall by 25 points.
 I reviewed and approved all 180 labels before training. The original AI
 annotation notes and the review status are recorded in `labels.csv`. In
 unit 6, the 30 staff-set labels in `my_staff_labels.csv` were also produced by
-AI rather than by me; see the Agreement Report.
+AI rather than by me; see the Agreement Report. The 124 posts added for the
+unit 6 improvement were also AI-pre-labelled, then reviewed and approved by
+me; see The Improvement.
 
 <!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════
 
@@ -486,24 +488,101 @@ suggests what would help: a rule that names one observable test, the way rule
 
 ## The Improvement
 
-**What I changed:**
+**What I changed:** I added 124 more r/AskPhysics posts to `labels.csv`,
+taking it from 200 to 324 rows. Nothing else changed: same model, same
+settings (3 epochs, lr `2e-5`, batch size 8, 256 tokens) and the same three
+seeds. The new posts were collected with `collect_askphysics_more.js`, with
+posts already in the dataset removed by `prepare_new_posts.py`. They were
+AI-pre-labelled under my existing definitions and boundary rules, then
+reviewed and approved by me; each row's `note` records this.
 
-**Which diagnosis pointed at it:**
+| Label | Before | Added | After |
+|---|---|---|---|
+| `scenario` | 44 | 36 | 80 |
+| `mechanism` | 76 | 38 | 114 |
+| `claim_check` | 53 | 26 | 79 |
+| `guidance_request` | 27 | 24 | 51 |
+| **Total** | **200** | **124** | **324** |
+
+This is broader than "thirty more of the thinnest label": it adds examples to
+every label, because my diagnosis found the whole model under-trained, not
+one weak label. The split grew from 139 / 31 / 30 to 226 / 49 / 49
+(train / val / test), so `guidance_request` now has 8 test posts instead of 4.
+
+**Which diagnosis pointed at it:** Misses 1–3. Before the change, the model
+collapsed to `mechanism`: validation accuracy stayed flat at 0.387 through
+every epoch on every seed, after only about 54 training steps on 139 posts.
+That is a too-little-data problem, so more labelled data was the one change
+to make.
 
 ### Run Log — After
 
 | Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
 |---|---|---|---|---|---|
-| 1.  |  |  |  |  |  |
-| 2.  |  |  |  |  |  |
-| 3.  |  |  |  |  |  |
-| 4.  |  |  |  |  |  |
-| 5.  |  |  |  |  |  |
+| 1. Overall accuracy | >= 0.55 each seed | 0.571 | 0.429 | 0.612 | MISSED |
+| 2. Macro F1 | >= 0.50 each seed | 0.504 | 0.262 | 0.548 | MISSED |
+| 3. Per-label F1 (S/M/C >= 0.45; G >= 0.30) | All label floors each seed | S 0.588; M 0.630; C 0.000; G 0.800 | S 0.500; M 0.548; C 0.000; G 0.000 | S 0.667; M 0.667; C 0.000; G 0.857 | MISSED |
+| 4. Label balance (now 324 posts) | Each label 10%-50% | S 24.7%; M 35.2%; C 24.4%; G 15.7% | Same dataset | Same dataset | MET |
+| 5. Confidence accuracy (top/low third; gap) | Top >= 0.60 and gap >= 0.10 each seed | 0.625 / 0.500; +0.125 | 0.625 / 0.188; +0.437 | 0.750 / 0.438; +0.312 | MET |
+
+Criterion 4's original wording names a 200-post dataset. I applied the same
+10%–50% range to the 324-post dataset the after run trained on; the original
+200 posts also met it (see Run Log — Before).
+
+**Before and after, side by side:**
+
+| Measure | Before (42 / 7 / 2024) | After (42 / 7 / 2024) |
+|---|---|---|
+| Overall accuracy | 0.400 / 0.367 / 0.367 | 0.571 / 0.429 / 0.612 |
+| Macro F1 | 0.238 / 0.134 / 0.134 | 0.504 / 0.262 / 0.548 |
+| F1 — `scenario` | 0.000 / 0.000 / 0.000 | 0.588 / 0.500 / 0.667 |
+| F1 — `mechanism` | 0.550 / 0.537 / 0.537 | 0.630 / 0.548 / 0.667 |
+| F1 — `claim_check` | 0.000 / 0.000 / 0.000 | 0.000 / 0.000 / 0.000 |
+| F1 — `guidance_request` | 0.400 / 0.000 / 0.000 | 0.800 / 0.000 / 0.857 |
+| Accuracy spread across seeds | 0.033 | 0.184 |
+
+**Confusion matrix after (seed 42, 49 held-out posts):**
+
+| true \ predicted | scenario | mechanism | claim_check | guidance_request |
+|---|---|---|---|---|
+| **scenario** | 5 | 7 | 0 | 0 |
+| **mechanism** | 0 | 17 | 0 | 0 |
+| **claim_check** | 0 | 11 | 0 | 1 |
+| **guidance_request** | 0 | 2 | 0 | 6 |
 
 **Did it help, and how do I know:**
 
-<!-- If it didn't, say so. Relabelling that didn't help is a genuinely
-     interesting result and earns full credit. -->
+Yes, partly. The verdicts did not change: criteria 1–3 are still missed and
+4–5 are still met. But the model is now learning the task instead of guessing
+the majority label:
+
+- **The model learns during training now.** Validation accuracy rose every
+  epoch on every seed (seed 42: 0.347 → 0.469 → 0.490; seed 2024: 0.347 →
+  0.408 → 0.551), where before it was flat at 0.387.
+- **Two of three seeds came close to or passed the targets.** Seeds 42 and
+  2024 passed the accuracy target (0.571, 0.612) and the macro F1 target
+  (0.504, 0.548). `scenario` went from 0.000 to 0.500–0.667 on every seed,
+  and `guidance_request` reached 0.800 and 0.857 on two seeds.
+- **Seed 7 still mostly collapsed.** It called 45 of 49 posts `mechanism`
+  (accuracy 0.429). That is why every criterion with an "each seed" target
+  still misses. The accuracy spread grew from 0.033 to 0.184, past the
+  10-point instability line. Before, the low spread came from every seed
+  collapsing the same way; now the result depends on which posts land in
+  training. That instability is itself a finding: 324 posts is still too few
+  for a stable measure.
+- **`claim_check` did not improve at all.** It is 0.000 on every seed, and no
+  seed predicted `claim_check` for a single post. With 26 more `claim_check`
+  examples, the other three labels improved and this one didn't. That rules
+  out "too few examples" as the main cause for this label and points at my
+  hardest boundary: `mechanism` vs `claim_check` is either a genuinely hard
+  pair or one my labels apply inconsistently. 11 of the 12 test
+  `claim_check` posts were called `mechanism` on seed 42, and none went the
+  other way.
+
+One caveat on the comparison: adding data also changed the test split, from
+30 posts to 49, so before and after are not scored on identical posts. The
+three-seed pattern and the training curves are the stronger evidence that the
+change helped.
 
 
 

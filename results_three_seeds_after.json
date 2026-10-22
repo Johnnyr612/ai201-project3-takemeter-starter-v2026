@@ -1,0 +1,209 @@
+[
+  {
+    "seed": 42,
+    "n_test": 49,
+    "accuracy": 0.5714285714285714,
+    "f1_macro": 0.5044662309368192,
+    "per_label": {
+      "scenario": {
+        "precision": 1.0,
+        "recall": 0.4166666666666667,
+        "f1": 0.5882352941176471,
+        "support": 12
+      },
+      "mechanism": {
+        "precision": 0.4594594594594595,
+        "recall": 1.0,
+        "f1": 0.6296296296296297,
+        "support": 17
+      },
+      "claim_check": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 12
+      },
+      "guidance_request": {
+        "precision": 0.8571428571428571,
+        "recall": 0.75,
+        "f1": 0.8,
+        "support": 8
+      }
+    },
+    "confusion": {
+      "scenario": {
+        "scenario": 5,
+        "mechanism": 7,
+        "claim_check": 0,
+        "guidance_request": 0
+      },
+      "mechanism": {
+        "scenario": 0,
+        "mechanism": 17,
+        "claim_check": 0,
+        "guidance_request": 0
+      },
+      "claim_check": {
+        "scenario": 0,
+        "mechanism": 11,
+        "claim_check": 0,
+        "guidance_request": 1
+      },
+      "guidance_request": {
+        "scenario": 0,
+        "mechanism": 2,
+        "claim_check": 0,
+        "guidance_request": 6
+      }
+    },
+    "confidence": {
+      "mean_when_right": 0.39337071776390076,
+      "mean_when_wrong": 0.3817010223865509,
+      "accuracy_most_confident_third": 0.625,
+      "accuracy_least_confident_third": 0.5,
+      "n_per_third": 16
+    },
+    "device": "cuda",
+    "device_name": "NVIDIA GeForce RTX 3060 Ti",
+    "torch_version": "2.14.1+cu126",
+    "max_length": 256
+  },
+  {
+    "seed": 7,
+    "n_test": 49,
+    "accuracy": 0.42857142857142855,
+    "f1_macro": 0.2620967741935484,
+    "per_label": {
+      "scenario": {
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "support": 12
+      },
+      "mechanism": {
+        "precision": 0.37777777777777777,
+        "recall": 1.0,
+        "f1": 0.5483870967741935,
+        "support": 17
+      },
+      "claim_check": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 12
+      },
+      "guidance_request": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 8
+      }
+    },
+    "confusion": {
+      "scenario": {
+        "scenario": 4,
+        "mechanism": 8,
+        "claim_check": 0,
+        "guidance_request": 0
+      },
+      "mechanism": {
+        "scenario": 0,
+        "mechanism": 17,
+        "claim_check": 0,
+        "guidance_request": 0
+      },
+      "claim_check": {
+        "scenario": 0,
+        "mechanism": 12,
+        "claim_check": 0,
+        "guidance_request": 0
+      },
+      "guidance_request": {
+        "scenario": 0,
+        "mechanism": 8,
+        "claim_check": 0,
+        "guidance_request": 0
+      }
+    },
+    "confidence": {
+      "mean_when_right": 0.3980743885040283,
+      "mean_when_wrong": 0.3591531813144684,
+      "accuracy_most_confident_third": 0.625,
+      "accuracy_least_confident_third": 0.1875,
+      "n_per_third": 16
+    },
+    "device": "cuda",
+    "device_name": "NVIDIA GeForce RTX 3060 Ti",
+    "torch_version": "2.14.1+cu126",
+    "max_length": 256
+  },
+  {
+    "seed": 2024,
+    "n_test": 49,
+    "accuracy": 0.6122448979591837,
+    "f1_macro": 0.5476190476190476,
+    "per_label": {
+      "scenario": {
+        "precision": 0.7777777777777778,
+        "recall": 0.5833333333333334,
+        "f1": 0.6666666666666666,
+        "support": 12
+      },
+      "mechanism": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "support": 17
+      },
+      "claim_check": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 12
+      },
+      "guidance_request": {
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.8571428571428571,
+        "support": 8
+      }
+    },
+    "confusion": {
+      "scenario": {
+        "scenario": 7,
+        "mechanism": 5,
+        "claim_check": 0,
+        "guidance_request": 0
+      },
+      "mechanism": {
+        "scenario": 0,
+        "mechanism": 17,
+        "claim_check": 0,
+        "guidance_request": 0
+      },
+      "claim_check": {
+        "scenario": 2,
+        "mechanism": 10,
+        "claim_check": 0,
+        "guidance_request": 0
+      },
+      "guidance_request": {
+        "scenario": 0,
+        "mechanism": 2,
+        "claim_check": 0,
+        "guidance_request": 6
+      }
+    },
+    "confidence": {
+      "mean_when_right": 0.403209388256073,
+      "mean_when_wrong": 0.3702647089958191,
+      "accuracy_most_confident_third": 0.75,
+      "accuracy_least_confident_third": 0.4375,
+      "n_per_third": 16
+    },
+    "device": "cuda",
+    "device_name": "NVIDIA GeForce RTX 3060 Ti",
+    "torch_version": "2.14.1+cu126",
+    "max_length": 256
+  }
+]

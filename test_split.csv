@@ -1,126 +1,44 @@
 text,label,note
-"What things might be better made in 0g?
+"What is observation?
 
-Some examples are certain crystal structures, biomanufacturing, etc. Are there any outlandish things you can think of?",guidance_request,AI pre-label; reclassified as guidance_request after taxonomy update; Reviewed and approved by me
-"In an expanding universe is more space being created, or is finite space being stretched?
+As far as I have understood so far, observation is defined by the results of an observation (an interaction which results in a change in state), which sounds weird to me as a definition - since it doesn't describe anything about the interaction itself. I just doesn't sound like a precise scientific definition to me.
 
-First Reddit post!
+Can someone help me wrap my head around what an observation is exactly? Please? Pretty Please? With sugar on top?",mechanism,AI pre-label; Reviewed and approved by me
+"Anyone willing to do an interview?
 
-This question has bugged me as an armchair cosmologist.  When physicists say the universe is expanding does it mean that ""space"" is being stretched, but there is still only so much of it, or is more space being created?  I \*think\* this is ultimately a question about space either being discrete (like in loop quantum gravity) or being continuous (general relativity).  Or am I just misunderstanding the whole thing (probably).
+Hey guys. For a college assignment, I need to interview someone who graduated college with a degree in physics and is currently working as a physicist. The only caveat is that they can't be in academia or someone still in school. It is an extremely odd ask, but I'm not sure where else to look. Anyone willing to be interviewed for around 30 minutes via zoom or voice call?",guidance_request,AI pre-label; reclassified as guidance_request after taxonomy update; Reviewed and approved by me
+"In zero gravity, liquids create a sphere. If a small cube suddenly appeared with the mass of the Earth, would the cube act like a magnet?
 
-Thanks!  :-)",mechanism,AI pre-label; Reviewed and approved by me
-"if i accelerated to the fastest speed possible in our universe at a black hole would i still be spaghettified? if yes, how?
+Example: https://imgur.com/a/qz4XYYt
 
-another way to put it
-if two photons with a distance of 1 meter between them headed towards a black hole would the distance change as they enter it?",scenario,AI pre-label; Reviewed and approved by me
-"Calculus for physics
+I'm trying to visualize how the sphere of water would react if a cube with the mass of the Earth suddenly appeared. Would it act like a magnet, or would it have different ""attractive"" characteristics? Would the cube have north and south ""gravitational poles""?",scenario,cold
+"Do anybody of you guys know a channel or a Web that is going to help to learn physics?
 
-Hello!
+I recently  started  searching about the fundamentals of physics  since my dream is becoming an instrument scientist. Can you help guys?",guidance_request,AI pre-label; Reviewed and approved by me
+"Confused about how fusion even works in the sun.
 
-I apologise if it will sound a bit silly, but I would like to find some materials covering calculus applied for physics. I study engineering and the calculus we have been shown is very basic and in general not in depth at all, its just easier-ish functions (like integration of quadratic equations, some logarithms etc etc), so i understand only basics of calculus. But when it comes to physics, I can't help feeling like it's totally something else, all of a sudden we are playing only with letters and I just can't develop that intuition, you know something like when doing a problem I just can't come up with ""aha let's make a time derivative of this to get home!"" and when we are doing problems in class I can't figure out what is going on. And I don't mean to be insensitive, but this is my last semester of physics and I want to pass it, are there practical materials that could help me get that intuition?",guidance_request,AI pre-label; reclassified as guidance_request after taxonomy update; Reviewed and approved by me
-"If light is both a particle and a wave
+So, I understand the very basic description, that hydrogen is fused together under immense pressure to form helium. But hydrogen has one proton in its nucleus, and helium has 2 protons and 2 neutrons. I have seen that the protons actually have to quantum tunnel, to get close enough for the strong force to bind them, but how does the process even happen? Surely, 4 protons would have to all bind together and 2 of them would have to turn into neutrons? Is this just complete dumb luck and chance over millions of years that this actually happens, or is there actually some known process going on here that makes this fusion take place? Does it happen in one single step, or do protons slowly build up over time with some converting to neutrons? Thanks.",mechanism,AI pre-label; Reviewed and approved by me
+"Does information from quantum entanglement travel at C?
 
-So has the properties of both that means they should have quantum properties...does that mean we should be able to look back at our.current position and see the past as we move through space? Or be able to measure past particle readings and see the wave form....i don't know...i may be drunk...",claim_check,AI pre-label; Reviewed and approved by me
-"What physics principles should I consider when designing packaging to protect an egg from a fall?
+If I have two quantum entangled particles which I space 2 light seconds apart. If I measure one at t=0s and it collapses to spin down, what happens if I measure the other one at t=1s? Will it always come up spin up? How did it know? What will happen at t=2s? Will it suddenly flip to spin up if before it chose spin down?",scenario,AI pre-label; borderline mechanism; Reviewed and approved by me
+"How is a stick the length of a light year affected?
 
-Hi everyone. I'm working on a packaging project for my logistics engineering course, and I'm looking for some advice.
+Okay so I understand the concept that if I had a stick that was for example a light year long, and I were to pull the stick it would not register on the other side for a long time.
 
-I need to make packaging that can protect an egg from drops of different heights, while keeping it lightweight and cheap. Cardboard is one of the materials I'm considering, but I'm still figuring out how to approach the design.
+But if you were to pull the stick, my question is, during the period where the pull has not been registered on the other end, is the stick now considered longer than it was previously or does the sticks length remain unchanged?",scenario,AI pre-label; Reviewed and approved by me
+"Effect of the curvature of spacetime from the Sun on a person walking on the Earth?
 
-I'd like to learn more about what makes packaging effective at absorbing impacts, what materials or structures are worth looking into, and what mistakes to avoid.
+(Firstly, I'm not a physicist, as you'll see by this question.  But I've been attempting to learn more about the subject of spacetime, and had this thought today.  And apologies in advance if I'm incorrect about any of the presumptions.)
 
-I'm not looking for a ready-made design, just some ideas and general advice to help me figure things out myself. Thanks!",guidance_request,AI pre-label; reclassified as guidance_request after taxonomy update; Reviewed and approved by me
-"How do particle accelerators get particles?
+I'm wondering about a spacetime scenario, relative to the interaction of curved spacetime of the Sun, the Earth and a person walking on the Earth.  It's something that I've never come across in any explanation of spacetime curvature on geodesics.
 
-Maybe more of an engineering question than a phsyics one. I understand the acceleration part, charged particles and magnetic fields and all, but where would you get a singe (or i guess a few dozen) electrons or protons to accelerate in the first place?",mechanism,AI pre-label; Reviewed and approved by me
-"What is the weight of the universe?
+I'm pretty sure I understand the impact of Earth's curvature of spacetime and how it affects the person walking on its surface (i.e., the path they're taking), but obviously the Sun's mass and curvature of spacetime affects the Earth.  What I'm wondering is, that due to the curvature via the Sun, does this mean that the geodesic of the person walking is now following a path affected by both masses?",scenario,AI pre-label; Reviewed and approved by me
+"Does ordinary matter contain antimatter particles?
 
-Can we calculate the weight of the infinite universe?",mechanism,AI pre-label; weak fit; Reviewed and approved by me
-"Angular speeds of two points of a rigid body
+Is antimatter a component of ordinary matter?  Maybe as virtual particles?  If so, how much of the mass-energy of ordinary matter is actually antimatter?  How much of the mass of ordinary matter is due to the mass of antiparticles, and how much is due to the kinetic energy of those antiparticles?",mechanism,AI pre-label; borderline with claim_check; Reviewed and approved by me
+"Time
 
-Consider a 2D rigid body moving on a plane, an inertial reference frame (not necessarily the CM frame) and two points of the rigid body p1 and p2 with non-zero, non-parallel velocities v1 and v2.
-Construct the line passing through p1 and orthogonal to v1, and likewise for p2, and call the intersection point of these lines c. Call the distances from c to p1 and p2, respectively, d1 and d2. Define w1 := |v1|/d1 and w2 = |v2|/d2. Show that w1 = w2.
-
-My attempt: from the condition that p1 and p2 belong to a rigid body, I can say that d/dt |r1 - r2| = 0, where r1 and r2 are the position vectors of p1 and p2 in our coordinate system. I can claim this from the definition of rigid body (distance between any pair of points remains constant). This implies:
-
-0 = d/dt |r1 - r2|\^2 = d/dt (r1 - r2)\^2 = 2(r1 - r2)•(v1 - v2)
-
-so that (r1 - r2)•(v1 - v2) = 0. (1)
-
-I also know that v1•(r1 - rc) = 0 because by construction v1 is orthogonal to the line connecting p1 to c, and r1 - rc is parallel to that line. Likewise for p2. I can use this inside (1) if I take (1) and add and subtract rc like this:
-
-0 = (r1 - r2)•(v1 - v2) = (r1 -rc +rc - r2)•(v1 - v2) = -v2•(r1 - rc) -v1•(r2 - rc)
-
-So that v1•(r2 - rc) = -v2•(r1 - rc)
-
-By taking the absolute value of both sides, this implies
-
-|v1| d2 |cos(alpha)| = |v2| d1 |cos(beta)|
-
-Where alpha is (one of the) angles formed by v1 and the line from p2 to c and beta is (one of the) angles formed by v2 and the line from p1 to c.
-
-Rearranging
-
-w1 |cos(alpha)| = w2 |cos(beta)|
-
-This is almost the desired result if I manage to show that |cos(alpha)| = |cos(beta)|. How can I show this? I’m stuck here.
-
-Thanks to anyone who helps!",claim_check,AI pre-label; homework check; Reviewed and approved by me
-"Does Hydrostatic law apply?
-
-Consider a three fluid triple u tube manometer.
-
-Draw a horizontal line intersecting all tubing. Is the pressure the same at all these points, even if they are differnet fluids??
-
-Or is the hydrostatic law only applicable within a given fluid/fluid barrier?",mechanism,AI pre-label; Reviewed and approved by me
-"How do solutions change evaporation rates
-
-I have been trying to figure out a dynamic of changing the evaporation rate of water.
-
-How is it that w solution of water and ethanol or water and acetone are able to cause water to increase its rate of evaporation?",mechanism,AI pre-label; Reviewed and approved by me
-"Question about gravity and spacetime
-
-So, from my understanding of time dilation, the reason why it occurs is that spacetime gets physically in the time dimension, causing your velocity C in said dimension to cover less “distance” than it would without gravity, like if you had a football field where each yard line is one second and you made the yard lines further apart, causing the velocity to be less effective, and I was wondering if this was true for space as well, meaning if you were to apply energy to an object in a very low gravity environment (such as deep space), then apply the same amount to one in a high gravity environment where the pull wouldn’t add to your velocity due to pulling you towards the planet, (such as being between two identical massive bodies along a line at which their gravitational pulls cancel out). would the high gravity environment lead to a decrease in velocity",claim_check,AI pre-label; Reviewed and approved by me
-"Timetravel paradox question
-
-Imagine going in a spacecraft at 99.99% the speed of light and the spacecrafts trajectory was a circle around the earth. You are doing this for five years. I dont know the maths but say 1000 years went on on earth during this trip.
-
-Would you from your spacecraft meassure that the earth that you’ve been circling for 5 years has been circling the sun 5 or 1000 times? I mean when you slow down you will notice a 1000 years have passed but wouldnt you only experience 5 full orbits around the sun? When does the remainibg 995 orbits occur?",scenario,AI pre-label; Reviewed and approved by me
-"Could a hollow black hole or neutron sphere exist, and if so, what would be interesting or useful about it?
-
-Saw a Dust video today where a planet sized sphere was made (standalone, not a Dyson sphere that surrounds other astronomical objects). Made me wonder if an astronomical sized hollow sphere could be coerced into a hollow black hole, or maybe even a hollow neutron star.
-
-Maybe build the initial shell and then throw matter at it to slowly increase the mass. Hollow shell, or Gauss's theorem, would suggest the interior gravitational field is zero up to the inner surface, so the density increase with added mass would occur by the mass collapsing outwards. Start with a relatively small hollow sphere I guess. Or maybe throw a spherical array of neutron spheres or black holes at each other so that they collide around an open space.
-
-Anyway once a hollow sphere of neutron matter or black hole is achieved, there'd be zero gravitational field up to the inner surface (neutron or event horizon). If so, does that mean that an object on the interior experiences no general relativistic effects anywhere right up to the inner surface? I assume not. In that case we could sit right next to a black hole event horizon or neutron star surface without having to worry about falling in or aging at a different rate to our buddies elsewhere inside or at a sufficient distance outside.
-
-Of course inside and outside would be cut off from each other. However perhaps a pin hole could be part of the original construction. Presumably it would leave a near zero field that would enable travel and communication to and from the interior. Perhaps grab a pinch of neutron matter from the the interior surface, against negligible gravitational force, for study, or exit the pin hole and throw it into the outside surface, converting potential to kinetic energy and powering whatever is needed.
-
-Anyway just thinking aloud. Any thoughts?",scenario,AI pre-label; Reviewed and approved by me
-"Say 100 different thermometers to get to the real temperature?
-
-If I buy lots of different thermometers - digital, analogue - and put them in a box in my kitchen will the average be fairly close to the true temperature? Or is the true temperature impossible to establish? The electronic ones may produce heat so what about if they are all analog - mercury and red fluid stuff?
-
-Because currently I have about +/- 1.5 degrees C on various devices from Apple HomePods to dedicated electronic thermometers to mercury / red liquid wooden greenhouse thermometers.",scenario,AI pre-label; Reviewed and approved by me
-"Hi everyone
-
-I just graduated highschool I'm going med , dental or pharmacy school but i really really love physics so i want to continue studying it as a hobby. where do i start and how should i study? I'm more into studying through the source and without a notebook like I'd study the textbook and that's it i write my notes in it , I'm not a fan of being tutored i like reading and understanding things myself but i can still need help , so pls give me some good advice 🙏🏻🙏🏻",guidance_request,AI pre-label; reclassified as guidance_request after taxonomy update; Reviewed and approved by me
-"How come two fundamental forces be combined in the early stages of universe?
-
-Please explain in simple ways what does it mean for the fundamental forces to be combined into one single force. For instance, we've evidence that there was a unified electroweak force which break into electromagnetism and weak force via the electroweak symmetry breaking. Would like to know it in layman's and rigorous terms.",mechanism,AI pre-label; Reviewed and approved by me
-"Electrons orbit the nucleus, atoms form compounds, and then those compounds dissociate; this process repeats countless times with various atoms, yet the electrons do not scatter or crash into the nucleus. (In some atoms, there are 118 electrons around the nucleus.)
-
-While placing an electron into orbit around a nucleus and keeping it there is an incredibly difficult task, atoms accomplish it with great ease. How does this happen? Could you explain the mechanism behind it?",mechanism,AI pre-label; Reviewed and approved by me
-"Are radio waves truly moving and shaped like waves?
-
-I just recently learned that radio waves are moving at the speed of light, and was wondering how that is possible if they are wave like?",mechanism,AI pre-label; Reviewed and approved by me
-"Is This Why Binding Particles Release Energy?
-
-Consider two particles moving towards each other. If they have mass, then they have some kinetic energy. They have 0 potential energy relative to a point in infinity (nuclear potential energy if they're nucleons and chemical potential energy if they're atoms).
-
-If we assume they're moving with some constant velocity (so that we do no work on this system), then – at some distance – the particles will exert attractive forces with each other. By conservation of energy, this increases their kinetic energies and decreases their potential energy by the same amount.
-
-As they're brought to rest or slowed down (either due to repulsive nuclear or eletcrostatic forces) they bind, and so both their kinetic energues and potential energy are less than in the beginning. This means that they released the energy by conservation.",claim_check,AI pre-label; Reviewed and approved by me
+So say there was a planet that was 2x small then ours and there whole solar system as well they would be moving 2x fast then us what would happen if we met at the same time and it wouldn’t have to b 2x that’s just the example I would think it’s would just be impossible cs in a way it could be messing with time we would all have to be living on the same time state right",scenario,AI pre-label; Reviewed and approved by me
 "Questions about gravitons and why quantum gravity is needed
 
 I'm an undergraduate physics student, and I'm trying to get a clearer conceptual picture of gravitons and quantum gravity. I have three related questions:
@@ -130,25 +48,146 @@ I'm an undergraduate physics student, and I'm trying to get a clearer conceptual
 2. I vaguely remember that in general relativity, spacetime is not a fixed stage: matter curves spacetime, and spacetime affects the motion of matter. But in ordinary quantum mechanics and quantum field theory, spacetime is usually treated as a fixed background, where particles and fields exist and evolve without causing the background itself to change. Is this one of the reasons why reconciling quantum theory with general relativity is so difficult?
 
 3. I also wonder about the motivation for developing a theory of quantum gravity. Why isn't it enough to let quantum mechanics and general relativity work in their own domains? Why do physicists want to reconcile them? What makes this problem so important? If we eventually solved it, how would it change our understanding of fundamental physics?",claim_check,AI pre-label; borderline mechanism; Reviewed and approved by me
+"Time delay between observer and person near event horrizon of black hole
+
+The thought just occured to me that as time is relevant to mass and the closer you are to a black hole event horrizon time seem to have slowed down when an observer looks at you even tho thats not the case in actuallity it just seem like it the closer someonegets to the event horrizon, we also know black holes have different mass what does that mean to time dialation between different black holes? Is the event horrizon in same place for every black hole or how would time be observed differently between observer and ""patient"" for the different black holes when observed time is based on mass?",mechanism,AI pre-label; Reviewed and approved by me
+"Does the Williamson-van der Mark confined-photon electron imply anything about chemical bonding, or is the phase resemblance only an analogy?
+
+The 1997 Williamson and van der Mark paper, “Is the electron a photon with toroidal topology?”, postulates one thing: a circularly polarized photon can self-confine on a closed path of one Compton wavelength (lambda\_C ≈ 2.43 × 10\^-12 m). One full field twist makes the electric field point radially, which they identify with electron or positron charge, plus a magnetic moment and spin 1/2. The paper stops at the single electron. It has no molecule and no bond.
+
+Molecular orbital theory explains bonds by phase. In-phase overlap of atomic orbitals lowers the energy (bonding); out-of-phase overlap raises it (antibonding). Bond order is (n\_bonding - n\_antibonding) / 2. The toroidal model also lives by phase matching, but the phase is internal to one photon, not a relation between orbitals on two atoms.
+
+The open question is whether that resemblance can be turned into a bonding theory. Call it a confined-photon bonding theory only as a proposal, not as a result in the paper. Two loops near two nuclei would need an interaction energy E(R, phi) with a minimum at the observed bond length and depth. For H2 that is about 0.74 angstrom and 4.52 eV.
+
+One constraint: the electron rest energy stays 511 keV inside a bond, so the Compton loop cannot simply stretch out to bond length. The open piece, if any, is a small overlap energy E(R, phi) that has not been written down.
+
+Paper: J. G. Williamson and M. B. van der Mark, Annales de la Fondation Louis de Broglie 22, 133 (1997).",claim_check,AI pre-label; borderline mechanism; Reviewed and approved by me
+"Why do Electrons get converted to heat inside circuits?
+
+Circuits work really well, but they leak a lot of energy. It's kind of like hot water running through a cracked pipe. Yes it works but we lose water overtime. Do we know what the exact cause is for electronics or do we just revolve our answers around the conservation of energy?",mechanism,AI pre-label; Reviewed and approved by me
 "Can someone explain to me the relationship between potential energy and conservative force(11th grade)
 
 I have tried reading the definition and listening to my teacher but still it just doesn't make sense to me",mechanism,AI pre-label; Reviewed and approved by me
-"Does gyroscope precession in a gravitomagnetic field reverse if you change the gyro's spin direction?
+"I have read that for the r-process to happen temperatures have to reach over 1 billion degrees Celsius.
 
-Hi everyone.
+And that this is because there has to be a source of neutrons for atoms to capture. But, I have also read that there are things called neutron sources. Even devices that have been made at universities that produce neutrons. Am I incorrect?",claim_check,cold
+"How can it be true that gravity and light in a vacuum travel at the same speed if gravity can affect and consume light?
 
-There are a lot of conflicting answers online regarding this topic, so I'm looking for some clarity here.
+I feel like a massive idiot asking this but if it's true that gravity and light in a vacuum travel at the same speed, how can light ever be affected or consumed by gravity unless gravity moves faster than light in the first place? Like the only way for a blackhole to consume light would be to have a gravitational pull that acts faster the light it's 'chasing' if you know what I mean. Otherwise the light would just escape the gravitational pull? Which would mean it's faster than gravity?",mechanism,cold
+"How credible are Quantum Science and Technology degrees?
 
-The question: If a gyroscope is placed in a gravitomagnetic field, does the direction of its precession reverse if I change the rotation (spin direction) of the gyroscope itself?
+I've been seeing a lot of universities start to offer master's degrees in Quantum Science and technologies; however, because they are so new, I have yet to see any outcomes. My school launched a master's program in Quantum Science and Technology with no thesis, and I was wondering if anybody in the quantum industry could tell me about this would be percieved and if these degrees have any merit.",guidance_request,AI pre-label; Reviewed and approved by me
+"Can lightning strike you with the small gap of your door?
 
-Please keep it simple and avoid complex formulas—just looking for a straightforward physics explanation. Thanks!
+I know it's stupid but I'm genuinely curious, is there an impossibility miniscule chance that lightning could strike you through an open window or even a small gap?",scenario,AI pre-label; Reviewed and approved by me
+"The perfect Mace/Club
 
-Joerg\_H
+So, I had this discussion about water bottles on r/askswitzerland and the other person uses  a steel bottle, while I use a glass bottle.
 
-*Posted on October 13, 2026, at 01:12 PM*",scenario,AI pre-label; borderline mechanism; Reviewed and approved by me
-"Angular velocity of a 2D rigid body
+The glass bottle has much thicker walls, than the steel bottle and therefore I assume that it is heavier, which lead to my comment that at least I can use my bottle to defend against street robbery.
 
-For the planar motion of a rigid 2D body, is it true that the angular velocity in the Lab frame wrt the instantaneous center of rotation is always equal to the angular velocity in the CM frame wrt the center of mass?",claim_check,AI pre-label; Reviewed and approved by me
+Now, as I kept thinking about this, I questioned myself:
+
+Is a glass bottle with 3 mm wall thickness heavier than a comparable steel bottle with 1 mm wall thickness?
+My answer now is no. It isn't even heavier.
+
+But if it were, which bottle would be the better weapon?
+
+If a bottle is heavier, it is also slower.
+
+This lead me to this question.
+
+**What is the perfect Mace?**
+
+I think the force that my arm can apply is constant. If I use the mace in a downward movement towards the enemie knights head, then the gravitational force can be added.
+The heavier the better, as long as I can still lift it.
+
+But Energy = 1/2 * m * v²
+
+I can swing a mace with a 1 kg steel ball head faster than the same mace with a 10 kg steel ball head.
+The lighter the better in this case.
+
+What about air resistance?
+
+And what about the fact that it is sufficient to knock out the enemy knight? So, I don't need a 10 kg steel ball, if 1 kg can do the job and gives me more agility.
+
+So, the question should be answered, depending on the enemies armor.
+
+Can you think of a universal formula to calculate the perfect mace, with that formula taking the eneny armor into account?",claim_check,AI pre-label; Reviewed and approved by me
+"If you deleted one electron from each of your body's atoms, would it result in Earth's crust being destabilized, or the whole planet disintegrated?
+
+We once calculated the energy it would release on one of the chemistry subs, it was equivalent to like 180 million (or billion?) Tsar Bombas lol.",scenario,AI pre-label; Reviewed and approved by me
+"If a capacitor’s electric field is between its 2 plates, how can the plate repel a incoming charge that's trying to reach the plate through wire betn 2 plates?
+
+When we charge a capacitor, we transfer electrons from one plate to the other through a wire. As more charge accumulates, we say the charged plate increasingly repels the incoming electrons because of E field betn plate and the increasing potential difference
+
+
+
+But here’s my confusion: The electron travels through the wire and never passes through the gap between the plates where E field exists
+
+
+
+So how can the plate repel the incoming electron if electron isn't even passing through it's E field betn plates?",mechanism,AI pre-label; Reviewed and approved by me
+"How would a relatively slow thermal neutron cause a uranium-235 nucleus to split in half?
+
+It seems counterintuitive. How can a massive uranium-235 nucleus absorbing a single neutron cause the entire thing to split. The strong nuclear force should be strong enough to hold the nucleus together. Besides, most nuclei just absorb neutrons without the entire thing splitting, even some heavy nuclei like lead or bismuth. Am I missing something?",mechanism,AI pre-label; Reviewed and approved by me
+"Question about gravity and spacetime
+
+So, from my understanding of time dilation, the reason why it occurs is that spacetime gets physically in the time dimension, causing your velocity C in said dimension to cover less “distance” than it would without gravity, like if you had a football field where each yard line is one second and you made the yard lines further apart, causing the velocity to be less effective, and I was wondering if this was true for space as well, meaning if you were to apply energy to an object in a very low gravity environment (such as deep space), then apply the same amount to one in a high gravity environment where the pull wouldn’t add to your velocity due to pulling you towards the planet, (such as being between two identical massive bodies along a line at which their gravitational pulls cancel out). would the high gravity environment lead to a decrease in velocity",claim_check,AI pre-label; Reviewed and approved by me
+"Interview questions for an astrophysicist
+
+I am interviewing an astrophysicist this week whose research encompasses theoretical general relativity, black holes, and gravitational waves… What are some questions I could ask that are unique and entertain that won’t sound boring to the average person who doesn’t understand all the physics jargon?",guidance_request,AI pre-label; reclassified as guidance_request after taxonomy update; Reviewed and approved by me
+"Electric field inside a high frequency capacitor
+
+Normally in DC to near AC a capacitor's electric field is constant across distance, but once the frequency causes a first order standing wave between the two plates does the electric field's magnitude change along the distance between the plates?
+
+(yes for any normal capacitor this frequency is in the visible light range or higher but in my case the plates have a large separation)",scenario,AI pre-label; borderline with mechanism; Reviewed and approved by me
+"Will physicists of today be remembered like the ones from the 20th century?
+
+In high school and undergrad we all learn about the works do Einstein, Newton, Bohr, and Maxwell. However in 50 years will students be learning about and know about the best modern day physicists like Edward Witten?
+
+In my opinion current physics research is far too complex to be teaching in undergrad whereas the works of Einstein and Bohr appear in a first year general chemistry course, Newton’s appear in middle school physics, and Maxwell’s appear in a first year E&M course. Will the stuff being discovered today be taught as something as widely accepted  and “trivial” as say the conservation of energy or will it be far too complex to reach the general public hence not having their names engraved into every STEM students brain?
+
+Would love to hear your thoughts on this.",claim_check,AI pre-label; forced fit (opinion question); Reviewed and approved by me
+"I think one part of The Speed of Light just clicked for me, but I still can't wrap my head around the other.
+
+So recently I think an explanation for why the SoL is the maximum speed of the universe just clicked for me, correct me if this explanation is completely wrong, but I think this is a good explanation for dummies (such as myself) as to why Spaceships can't reach the Speed of Light.
+
+So let's say a Spaceship, from the perspective of Earth, flies away at an acceleration of X speed per second. At first, from Earth's POV, the ship does seem to gain X speed every second. But because of Time Dilation, the faster an object moves, the faster it experiences time. So eventually, what the Ship experiences as one second is, say, 100 years on Earth. So at that point, even though the Ship accelerates at what it percieves as X/s, on Earth it looks like it took the Ship 100 years to accelerate to that speed. And the faster the ship gets, it takes longer and longer from Earth's POV for the ship to accelerate every subsequent X. And no matter how much time passes, it will never reach the speed of light from an outside perspective.
+
+
+Now if this explanation works (feel free to call me a dumbass if it doesn't), one thing didn't click for me yet: Why does the Time Dilation happen in the first place? Time Dilation seems to be defined as occuring due to the Speed of Light being the same from all points of view, but we just used Time Dilation to define the SoL in the first place.",claim_check,cold
+"Calculus for physics
+
+Hello!
+
+I apologise if it will sound a bit silly, but I would like to find some materials covering calculus applied for physics. I study engineering and the calculus we have been shown is very basic and in general not in depth at all, its just easier-ish functions (like integration of quadratic equations, some logarithms etc etc), so i understand only basics of calculus. But when it comes to physics, I can't help feeling like it's totally something else, all of a sudden we are playing only with letters and I just can't develop that intuition, you know something like when doing a problem I just can't come up with ""aha let's make a time derivative of this to get home!"" and when we are doing problems in class I can't figure out what is going on. And I don't mean to be insensitive, but this is my last semester of physics and I want to pass it, are there practical materials that could help me get that intuition?",guidance_request,AI pre-label; reclassified as guidance_request after taxonomy update; Reviewed and approved by me
+"What is ""matter"" according to QM?
+
+# What is Matter according to QM?
+
+Werner Heisenberg, one of the founders of quantum physics who formulated the Uncertainty Principle, said: “Atoms or elementary particles are not real; they form a world of \[potentialities\] or \[possibilities\], not a world of \[things\] or \[facts\].” In short, ""an atom is not a thing but a potential."" \[Aristotle also made a distinction between matter and form, or between potential and actual being, saying that anything is formed by the coming together of its raw material and the form that separates it from other things and makes it that thing. According to him, matter was a potential open to becoming anything, and form was what gave that potential being a specific shape, turning it into a concrete, real being.\]",mechanism,AI pre-label; philosophy; Reviewed and approved by me
+"Why are metals grey and shiny?
+
+What causes that shine? Why(and how) do electrons cause that shine?",mechanism,AI pre-label; Reviewed and approved by me
+"Confused about exam practice question
+
+My mechanics professor provided us practice questions to study for our midterm. I’m confused about this one:
+
+Your friend is on her way cross-country skiing and has to do 3000 J of work by pushing against the ground with her skis. In addition, friction does -800 J of work on her. With all her gear her mass is 60 kg. Her initial speed was 5 m/s and her final speed is 3 m/s.
+
+a) Calculate the change in kinetic energy of the skier.
+
+Since net work is just change in kinetic energy, this should be really simple. What I don’t understand is the skier doing 3000J of work by pushing against the ground with her skis - wouldn’t that be perpendicular to the displacement? How is it doing work?",claim_check,AI pre-label; homework; Reviewed and approved by me
+"Instant messaging with quantum entanglement
+
+Hello everyone.
+
+I saw a clip online (please forgive me if it's not true) that if you have two quantum entangled electrons with different spins at whatever distance you want and change the spin in one, the other one will also change its spin.
+
+If this is true, is it theoretically possible to create some form of messaging device/protocol that could travel any distance in the universe instantly using this property of physics? 
+
+EDIT: Thank you for your replies, I did not know if broke the entanglement.",claim_check,AI pre-label; Reviewed and approved by me
 "Dark Energy
 
 Hey everyone! I’m sure this is a super naive question.
@@ -158,16 +197,100 @@ My YouTube/Undergraduate (decades now ago 😂) physics knowledge lets me know D
 So my problem in understanding…this is light measured having been emitted many billions of years ago? Back when of course a giant event happened. Of course the further back you looked the faster things are going to look like. Of course the event was “pushing” things…the earlier you looked the faster it will be.
 
 How do we know/assume that’s still happening?",claim_check,AI pre-label; Reviewed and approved by me
-"Physics of a car breaking hard
+"Question about questions
 
-So we have tires on a car rotating with the wheel, how come when a car of lets say almost 2 tons, going 100 mph slams on the breaks, and (for the purpose of discussion) we ignore the ABS, the wheels and tires lock up all together but the car still has inertia, other than friction what holds the tire around the wheel and how come the tire doesn't start rotating around the wheel due to the huge friction between the tire and the road?
+Is it okay to ask what if questions where one current rule of physics is violated (such as no communication theorem) but wanting to obey others? Or only questions about current standard understanding of physics?",guidance_request,AI pre-label; forced fit (meta question about the subreddit); Reviewed and approved by me
+"If light is both a particle and a wave
 
-The wheel is mechanically connected to the car but the tire is held to the wheel just with friction and a bit of elastic force around the wheel.
+So has the properties of both that means they should have quantum properties...does that mean we should be able to look back at our.current position and see the past as we move through space? Or be able to measure past particle readings and see the wave form....i don't know...i may be drunk...",claim_check,AI pre-label; Reviewed and approved by me
+"What bends virtual photons around, in magnetic fields?
 
-Sorry if the question isn't well formulated (English is not my first language), but I hope you can understand what I am trying to ask.
+Hi everyone, I have some questions about magnetism.
 
+So its said that magnetic force, is mediated by virtual photons. And that this field propagates at the speed of light...
 
-Thanks!",mechanism,AI pre-label; Reviewed and approved by me
+But I've also seen it said that virtual photons are ""temporary"" particles. This makes them seem like very local particles, that only exist across a short distance.
+
+Now, I know that its said that ""virtual particles might not really exist"", but even then, lets just talk about the theory itself. The theory of virtual photons is that they only exist across a short distance.
+
+This ""short-distance"" rule, I found stated in this [reddit comment](https://www.reddit.com/r/askscience/comments/h013c/comment/c1rkwom/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button):
+
+Firstly, my question is: Well if they only exist over a short-distance, then how do magnetic fields work, which exist over a LARGE distance. Are the virtual photons absorbed and re-released... and by what? Empty space?
+
+Secondly, virtual photons are meant to move in straight lines. So what is curving them around, so that the magnetic force lines curve around back into the same object?
+
+Something?
+
+A few side questions:
+
+I've also seen a video of Richard Feynmann, talking about how virtual photons can even ""move faster than the speed of light, or slower"". Does this come into effect here? Can virtual photons have mass also? Does that come into account here.",mechanism,AI pre-label; Reviewed and approved by me
+"How to calculate heat loss of planets with additional mass.
+
+So my basic knowledge on the subject is that the rate of which a planet pools after forming is related directly to its size. The reason why Mars has stopped most of its geological activity while the Earth has not is because the Earth has more mass so it radiates its initial energy more slowly. It’s the same reason why the moon is much more geologically dead than Mars.
+
+So I wondered what would’ve happened if during the formation of the solar system, the Dwarf Planet Ceres had collided with Mars early in the formation of Mars. Based on my knowledge, this would add additional heat to the system and simultaneously slow down the rate of heat loss.
+
+Though because of the small mass of Ceres, I would assume that the rate of heat loss would be mostly the same, with the internals of Mars being just barely warmer.
+
+But I really can’t find anything to do the hard numbers. But I think I have figured out the numbers I would need to figure this out.
+
+1.) the rate of heat loss for planets and how that is affected by mass.
+
+2.) the extra energy that Mars would have had if the material that went onto form Ceres had instead merged into Mars.
+
+3.) how much slower heat would’ve been lost comparing IRL Mars with the theoretical Mars + Ceres
+
+I would assume that it isn’t gonna be super impactful, but Ceres isn’t nothing. It isn’t like the Asher that killed the dinosaurs where it is tiny and basically doesn’t matter on a planetary scale. And especially given that Mars is smaller than earth, Ceres would be disproportionately impactful compared to if it was added to the Earth.",scenario,AI pre-label; Reviewed and approved by me
+"How can point-like particles have mass?
+
+If particles like electrons and quarks have no volume, then how can they have mass? Is it just that they do have volume, its just very, very small, or do they actually lack any physical volume?
+
+Edit for follow up question: let's say we were able to gather 1 kg of electrons in a small enough space to put on a scale. The scale would register a weight, but there wouldn't actually be anything physical on the scale? Is that correct and if so how tf?",mechanism,AI pre-label; Reviewed and approved by me
+"How accurate is my explanation of entropy?
+
+I actually had to learn about the basics of entropy for AP Biology, but I ended up going down a huge rabbit hole trying to understand it and now I'm genuinely interested in it. I wrote down an explanation of entropy (pasted below) for my own comprehension and I wanted to know what I might need to correct or add on to make my understanding of entropy more accurate. Further explanation on this stuff would be much appreciated!!
+
+\--
+
+Entropy can simply be defined as a measurement of the disorder of the universe. But what does any of that actually mean?
+
+Think of the universe as a box. When the Big Bang happened and introduced a bunch of individual galaxies, it was like putting a bunch of colored balls in the box.
+
+Increasing the amount of stuff in the box changes the amount of configurations the balls can be in. (The amount of configurations can be referred to as “states”, or possible states of matter. Increasing the amount of matter, just like increasing the number of balls, leads to an increased amount of possible states the matter can be in.)
+
+Entropy is a demonstration of the probability that the balls inside the box will exist in a disorganized or random “state” rather than an organized one. It’s possible, of course, that the balls will align in an organized fashion, but the probability of this occurring is far less likely than the probability that the balls will be disorganized.
+
+High entropy refers to naturally occurring processes that lead to more disorder, or disorganization, in the overall universe. These processes have high entropy specifically because they happen naturally, without any added energy. Examples are water flowing downstream, or ice melting.
+
+If we were comparing ice and water, we would say water has higher entropy than ice because its molecules are free floating and move around quite a bit, while ice’s molecules are fixed in place and barely move at all. There’s more possible states the water molecules can be in, while ice has less possible states—water molecules have more randomness, which leads to higher entropy.
+
+In the context of chemical reactions, the entropy or disorder of the universe inc as chemical reactions transfer or transform energy. For example, eating mac and cheese (im hungry). The mac and cheese’s energy is converted to different forms of energy once eaten and digested so the body can carry out biological processes. Some of this energy is released as thermal energy, or heat, which introduces more molecules into the universe that changes the possible states of matter within the universe, thus increasing its entropy.
+
+So, to put it simply: entropy measures the randomness or disorder of the universe, which increases as chemical reactions occur. Typing this shit out rn is currently increasing the entropy of the universe
+
+\--
+
+Edit: this video ([https://www.youtube.com/watch?v=YM-uykVfq\_E&t=27s](https://www.youtube.com/watch?v=YM-uykVfq_E&t=27s)) really helped me understand it better since i felt like i couldn't really wrap my head around the simple explanation - putting it here for anyone who needs it",claim_check,AI pre-label; Reviewed and approved by me
+"why is my bathroom tile reflection polarizing?
+
+can’t seem to add a photo but my phone screen appears rainbow in the reflection of my bathroom wall. [see here](https://imgur.com/a/bpGOnC5) 
+
+it looks just like the view of a phone screen through polarized sunglasses. my hand/etc reflects normally 
+
+does this mean the wall material is…. refractive? dielectric? why? 
+
+eli5, I’ve never seen a wall do this before and I don’t understand optics",mechanism,AI pre-label; borderline with claim_check; Reviewed and approved by me
+"General Physics 1 Resources
+
+Hi friends. I am currently taking Physics 1 algebra based. Does anyone have good recommendations for practice problems? I am really struggling and I just might not be studying effectively? I’m having trouble grasping basic concepts and I refuse to give up there has to be a resource out there to help me grasp this? Maybe question banks to just repetitively do problems so I can hopefully understand what the questions are asking a bit better? The math isn’t the issue but it’s like me understanding what the question is asking most of the time that is really giving me trouble. I feel really stupid so if the comments could be positive and not telling me to quit I would appreciate that a lot.
+
+I am given a cheat sheet front and back I can create.",guidance_request,AI pre-label; reclassified as guidance_request after taxonomy update; Reviewed and approved by me
+"How many jabs could someone who can move at the speed of light throw in a single second.
+
+Assume that all aspects of their body and mind move at that speed. How many jabs could they throw?",scenario,AI pre-label; Reviewed and approved by me
+"If you are standing exactly on the north/south pole. Would your arms drag away from your body?
+
+If you start to rotate on your own your arm drag away from your body. From my understanding that happens because of inertia. If we asumme that the earth is rotating perfectly along the north/south pole axis, then standing on the pole would make you rotate at the speed of the rotation of the earth. Would this result in a centripedal force?",scenario,AI pre-label; Reviewed and approved by me
 "What is the ideal angle to throw an elastic chuckit ball for a dog, for it to go the maximum distance - including hopping?
 
 Assuming a flat surface, and reasonable parameters for elasticity and friction?
@@ -181,37 +304,43 @@ On the one hand, making the horizontal component as strong as possible seems to 
 
 EDIT:
 Asking as a layman.",scenario,AI pre-label; Reviewed and approved by me
-"Would spaceships travelling at the speed of light or faster leave contrail-like evidence of their movement through space?
+"What Is An Area In Life Where Having Studied Physics Helped You?
 
-Looking up at the sky on a clear day and seeing contrails, it got me wondering. If travelling between the stars necessitates thrusting a vessel through space at light speed and beyond, then why don’t we see contrail-like evidence of intergalactic travellers all over space the way we see contrails all over the sky due to air traffic? Granted the solution to intergalactic travel may not involve thrust at all, but let’s say it does. What evidence would this form of travel leave in its wake?",scenario,AI pre-label; Reviewed and approved by me
-"Can Refractive index be less than 1 ?
+It can be something expected or unexpected.
 
-Refrective index is the measurement of optical density of a material and it is inversely proportional to the speed of light in that medium (n=c/v\[absolute refrectiveindex\]). Naturally in every medium refrective index is less than one but when i was researching i found that in specific, non-standard condition (not for visible light but for electromagnetic wave like xray)absolute refrective index can be less than 1. If one can explain how it is possible that electric and magnetic feild chwnge faster than light or how these emw can travel faster than light and do not disobey the relativity",mechanism,AI pre-label; Reviewed and approved by me
-"Can soft-tissue deformation compromise the effectiveness of a roller coaster lap restraint even if the restraint remains mechanically locked?
+Simply put, you were able to apply what you learned in physics to come up with a solution. Maybe it was completely unrelated to the field. Perhaps it was a small thing. Or perhaps in an emergency you acted quickly because “xyz” knowledge was gained from studying the topic. Maybe you learned something new, a hobby, maybe something like gardening for example and your knowledge of physics somehow, directly or indirectly affected your decision making.
 
-I’ve been following the Goliath incident discussions, and my friend brought up a point that I’m wondering whether we’re overlooking something important.
+Studying any subject for an extended period of time certainly can change you as a person, which then extends to all facets of life. Hearing about how, to me, is interesting.
 
-What if the issue isn’t necessarily someone’s weight, size, or even a mechanical failure of the restraint, but **how body fat moves under negative G-forces?**
+I have not studied physics, but the subject interests me.
 
-Two people can weigh exactly the same but have very different body compositions. Adipose tissue (body fat) is compressible and deformable. It can shift relative to the skeleton under force.
+After buying University Physics by Sears & Zemansky and reading the first bit of chapter 1, I realized just how much problem solving could be applied to real world scenarios, even to the day-to-day mundane things. Just so cool.",guidance_request,AI pre-label; forced fit (opinion question); Reviewed and approved by me
+"How do black holes end?
 
-Think about breast tissue during roller coaster airtime. Even in a snug, supportive bra, breasts can lift and shift out of position. The bra hasn’t failed or come undone. The tissue itself has moved.
-**Now apply that same principle to someone with substantial abdominal fat sitting beneath a clamshell lap restraint.**
+Do they run out of matter to add to their size and just sit there forever of what?  Thanks",mechanism,AI pre-label; Reviewed and approved by me
+"It is said that if our universe had possessed even slightly more mass at the moment of the Big Bang, it would have already collapsed in on itself, and we would not be here today; conversely, if it had possessed slightly less mass, it would have simply dispersed.
 
-I’ve also come across firsthand accounts from riders describing their stomachs moving upward or over their lap restraints during airtime. That caught my attention because it’s the exact type of soft-tissue displacement I’m questioning.
+So, what magnitude of excess or deficit would cause such an outcome? Why do we face this issue?
 
-Could abdominal fat compress beneath a restraint while seated, then shift upward during negative G-forces, changing how securely the restraint engages the pelvis?
-**In other words, could a restraint remain completely locked and mechanically functional while the rider’s soft tissue shifts enough to compromise their positioning?**
-There’s scientific research on how abdominal fat affects seat belt engagement with the pelvic bones:
-[https://pmc.ncbi.nlm.nih.gov/articles/PMC9285376/](https://pmc.ncbi.nlm.nih.gov/articles/PMC9285376/)
 
-Obviously, automotive seat belts and roller coaster restraints aren’t identical, and I’m not claiming this caused the Goliath incident.
 
-I’m wondering whether we’re focusing too much on weight limits and mechanical failures without adequately considering **body composition, soft-tissue deformation, and dynamic movement during airtime.**
-Has anyone seen research or engineering discussions addressing this?
+It’s said a deviation of just one part in 10⁶⁰ from the critical density would have caused our universe to either collapse or disperse long ago. This represents an extraordinary level of precision; considering the observable universe—where the total mass (including dark matter and energy) is 10⁵⁴ kg—the precision required at the time of the Big Bang was on the order of 10⁵⁴/10⁶⁰. This equates to 1/10⁶ kg, or one milligram.
 
-**Related firsthand rider experiences:**
-I verified two particularly relevant accounts:
-**1. CoasterBuzz:** A rider who described himself as 242 pounds with a 36.5-inch waist said strong airtime pushed his belly over the top of the lap bar.
-[Read the CoasterBuzz discussion](https://coasterbuzz.com/Forums/Topic/rmc-and-weight-loss-motivation)⁠
-**2. Reddit,** [r/rollercoasters](applewebdata://2E719467-3DDC-458E-889A-8AF1CBBF6113/r/rollercoasters)**:** A rider described his stomach slipping from the restraint during negative G-forces, then coming back down. He said the experience was painful.",claim_check,cold
+In other words, had the mass of our universe at the time of the Big Bang differed by even the weight of a single grain of sand—whether in excess or deficit—it would have either collapsed in on itself or dispersed long ago.",mechanism,AI pre-label; Reviewed and approved by me
+"Light Travel & Time Dilation - Can't make sense of this!
+
+Hey there,
+
+
+I am no physics guru, just a guy w/ some interest in physics & how things work. I find the whole concept of time dilation, and the nature of time in general very fascinating.
+
+So, my understanding is that the closer you get to the speed of light, the more time slows down for you relative to someone stationary. So, if I went 75% of the speed of light on a trip around the solar system and came back in 6 months, an extra 3 months would have gone by on Earth.
+
+Now, supposedly, when things travel the speed of light--- time dilation si infinite. If the impossible became possible, and you traveled the speed of light, eons and eons would go by-- you'd find yourself at the end of time. the end of the universe, from one milisecond of light travel. Right?
+
+The thing that confuses me is this--- if traveling extremely fast makes time go slower for stationary objects, wouldn't they appear to be moving slower from an observers perspective?  Say that you watched a space ship go 75% of the speed of light and tracked it from one part of the milky way to another.  Wouldn't it appear to be going a lot slower than it really is, because it will take longer on Earth time for it to reach it's distance than it took for the sapce ship?  It took 5 years on teh sapce ship, but you watched it for 7.5 years get there, right?
+
+How about this--- if the speed of light causes infinite time dilation, how are we even able to see light travel? Wouldn't light take an infinite amount of time to get somewhere from an observers standpoint, due to time dilation? Why do we see it move at all, if this is the case? You'd think that like would be unable to travel, if it has unlimited time dilation.
+
+
+Thanks!",mechanism,AI pre-label; Reviewed and approved by me

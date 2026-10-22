@@ -1,66 +1,66 @@
 {
   "seed": 42,
-  "n_test": 30,
-  "accuracy": 0.4,
-  "f1_macro": 0.23750000000000002,
+  "n_test": 49,
+  "accuracy": 0.5714285714285714,
+  "f1_macro": 0.5044662309368192,
   "per_label": {
     "scenario": {
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0.0,
-      "support": 7
+      "precision": 1.0,
+      "recall": 0.4166666666666667,
+      "f1": 0.5882352941176471,
+      "support": 12
     },
     "mechanism": {
-      "precision": 0.3793103448275862,
+      "precision": 0.4594594594594595,
       "recall": 1.0,
-      "f1": 0.55,
-      "support": 11
+      "f1": 0.6296296296296297,
+      "support": 17
     },
     "claim_check": {
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
-      "support": 8
+      "support": 12
     },
     "guidance_request": {
-      "precision": 1.0,
-      "recall": 0.25,
-      "f1": 0.4,
-      "support": 4
+      "precision": 0.8571428571428571,
+      "recall": 0.75,
+      "f1": 0.8,
+      "support": 8
     }
   },
   "confusion": {
     "scenario": {
-      "scenario": 0,
+      "scenario": 5,
       "mechanism": 7,
       "claim_check": 0,
       "guidance_request": 0
     },
     "mechanism": {
       "scenario": 0,
-      "mechanism": 11,
+      "mechanism": 17,
       "claim_check": 0,
       "guidance_request": 0
     },
     "claim_check": {
       "scenario": 0,
-      "mechanism": 8,
+      "mechanism": 11,
       "claim_check": 0,
-      "guidance_request": 0
+      "guidance_request": 1
     },
     "guidance_request": {
       "scenario": 0,
-      "mechanism": 3,
+      "mechanism": 2,
       "claim_check": 0,
-      "guidance_request": 1
+      "guidance_request": 6
     }
   },
   "confidence": {
-    "mean_when_right": 0.37309014797210693,
-    "mean_when_wrong": 0.36846697330474854,
-    "accuracy_most_confident_third": 0.6,
-    "accuracy_least_confident_third": 0.3,
-    "n_per_third": 10
+    "mean_when_right": 0.39337071776390076,
+    "mean_when_wrong": 0.3817010521888733,
+    "accuracy_most_confident_third": 0.625,
+    "accuracy_least_confident_third": 0.5,
+    "n_per_third": 16
   },
   "device": "cuda",
   "device_name": "NVIDIA GeForce RTX 3060 Ti",
