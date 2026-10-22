@@ -1,0 +1,11 @@
+id,text,label,reason
+cal_01,"Booked the ferry, booked the hotel, and have just noticed the race is the following weekend.",reaction,what just happened to the writer; no argument
+cal_02,"Compared the two club 10Ks over five years. Ours is 40 seconds slower on median and 90 seconds slower on the winning time. Same runners, mostly — it's the course, not the field.",analysis,five-year median and winning-time gaps carry the course-not-field conclusion (rule 1)
+cal_03,Anyone who says they enjoy hill reps is either lying or has never done them properly.,hot_take,"confident general claim, no support"
+cal_04,Entries are down 30% and the committee wants to know why. It's the price. It has been the price for three years.,hot_take,borderline analysis: the 30% shows entries fell but is not evidence that price is the cause; decoration (rule 1)
+cal_05,Never felt better at 10 miles and never felt worse at 13. Marathon in three weeks and I have no idea what to think.,reaction,how a recent run felt; no general claim
+cal_06,"The couch to 5K completion rate here is about 20%, which is roughly what it is nationally, so the programme isn't the problem — the follow-on is. We have nothing for week 10.",analysis,local vs national completion rate is the reason the programme is ruled out (rule 1)
+cal_07,Running in the dark is the best part of winter and I will not be taking questions.,hot_take,"borderline reaction: 'best part of winter' is a general claim, not a report of a recent event (rule 2)"
+cal_08,Ran my fastest ever parkrun on four hours' sleep after a night shift. Everything I think I know is wrong.,reaction,"borderline analysis: one personal result is reported, not used to argue a checkable point (rules 2-3)"
+cal_09,Half the club's PBs were set on the same downhill course and we all know it and nobody says it.,hot_take,general claim about the club's PBs with no data offered
+cal_10,Got my club vest today. Wore it to the shop. No regrets.,reaction,the writer's own day; no claim

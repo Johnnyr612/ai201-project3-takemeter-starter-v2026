@@ -243,7 +243,9 @@ post changes that label's recall by 25 points.
 
 **Pre-labelling disclosure:** 180 posts were initially pre-labelled with AI.
 I reviewed and approved all 180 labels before training. The original AI
-annotation notes and the review status are recorded in `labels.csv`.
+annotation notes and the review status are recorded in `labels.csv`. In
+unit 6, the 30 staff-set labels in `my_staff_labels.csv` were also produced by
+AI rather than by me; see the Agreement Report.
 
 <!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════
 
@@ -374,6 +376,13 @@ Eight real `claim_check` posts were called `mechanism`, while zero real
      Remember you labelled these 30 under the STAFF taxonomy in
      data/staff_taxonomy.md, not your own — so every argument below is made
      from those definitions and those decision rules. -->
+
+**How my 30 labels were made:** The labels in `my_staff_labels.csv` were
+produced by an AI assistant (Claude) applying the definitions and decision
+rules in `data/staff_taxonomy.md`, before `data/staff_labels.csv` was opened.
+I did not label these 30 myself. This rate therefore measures the AI's
+application of the staff rules, not mine, and it is weaker evidence about the
+consistency of my own 200 labels than a self-labelled set would be.
 
 **Agreement rate:** ___ / 30 = ___%
 
