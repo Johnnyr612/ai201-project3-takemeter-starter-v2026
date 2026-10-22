@@ -299,29 +299,43 @@ effect of removing the definitions. Its results are saved in
 
 | Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
 |---|---|---|---|---|---|
-| 1.  |  |  |  |  |  |
-| 2.  |  |  |  |  |  |
-| 3.  |  |  |  |  |  |
-| 4.  |  |  |  |  |  |
-| 5.  |  |  |  |  |  |
+| 1. Overall accuracy | >= 0.55 each seed | 0.400 | 0.367 | 0.367 | MISSED |
+| 2. Macro F1 | >= 0.50 each seed | 0.238 | 0.134 | 0.134 | MISSED |
+| 3. Per-label F1 (S/M/C >= 0.45; G >= 0.30) | All label floors each seed | S 0.000; M 0.550; C 0.000; G 0.400 | S 0.000; M 0.537; C 0.000; G 0.000 | S 0.000; M 0.537; C 0.000; G 0.000 | MISSED |
+| 4. Label balance in 200 posts | Each label 10%-50% | S 22%; M 38%; C 26.5%; G 13.5% | Same dataset | Same dataset | MET |
+| 5. Confidence accuracy (top/low third; gap) | Top >= 0.60 and gap >= 0.10 each seed | 0.600 / 0.300; +0.300 | 0.600 / 0.000; +0.600 | 0.600 / 0.100; +0.500 | MET |
+
+Accuracy ranged from 0.367 to 0.400, a spread of 0.033 (3.3 percentage
+points), which is below the 0.10 instability threshold. That stability is
+misleading: seeds 7 and 2024 predicted `mechanism` for all 30 test posts, and
+0.367 is exactly the `mechanism` share of the test split (11 of 30). Seed 42
+differs only by getting one `guidance_request` post right. The seeds agree
+because the model collapsed to the majority label each time, not because it
+learned the task consistently. Macro F1 moved 0.103 and `guidance_request` F1
+moved 0.400, because that label has only 4 test posts and one correct
+prediction is the whole difference.
 
 ### Confusion matrix
 
 <!-- ⚠️ TYPED AS A MARKDOWN TABLE. The notebook prints one ready to paste.
      An image of a matrix earns nothing. -->
 
-| true \ predicted |  |  |  |
-|---|---|---|---|
-| **** |  |  |  |
-| **** |  |  |  |
-| **** |  |  |  |
+Seed 42, 30 held-out posts. Rows are true labels; columns are predictions.
+
+| true \ predicted | scenario | mechanism | claim_check | guidance_request |
+|---|---|---|---|---|
+| **scenario** | 0 | 7 | 0 | 0 |
+| **mechanism** | 0 | 11 | 0 | 0 |
+| **claim_check** | 0 | 8 | 0 | 0 |
+| **guidance_request** | 0 | 3 | 0 | 1 |
 
 **My biggest off-diagonal number, and what it means:**
 <!-- Not "the model made mistakes" — WHICH boundary it didn't learn, and which
      direction. "7 real analysis posts were called hot_take and only 3 went the
      other way" is a direction, not just an error rate. -->
-
-
+Eight real `claim_check` posts were called `mechanism`, while zero real
+`mechanism` posts were called `claim_check`; the model strongly favors
+`mechanism` on this boundary.
 
 ---
 
@@ -332,11 +346,11 @@ effect of removing the definitions. Its results are saved in
 
 | # | Criterion | Target | Verdict | How I decided |
 |---|---|---|---|---|
-| 1 |  |  |  |  |
-| 2 |  |  |  |  |
-| 3 |  |  |  |  |
-| 4 |  |  |  |  |
-| 5 |  |  |  |  |
+| 1 | Held-out accuracy | >= 0.55 on each seed | MISSED | All three were below 0.55 (0.400, 0.367, 0.367). |
+| 2 | Macro F1 | >= 0.50 on each seed | MISSED | All three were below 0.50 (0.238, 0.134, 0.134). |
+| 3 | Per-label F1 | S/M/C >= 0.45 and G >= 0.30 on each seed | MISSED | `scenario` and `claim_check` were 0.000 on every seed; `guidance_request` also missed on seeds 7 and 2024. |
+| 4 | Label balance | Every label 10%-50% of 200 posts | MET | Counts were scenario 44 (22%), mechanism 76 (38%), claim_check 53 (26.5%), guidance_request 27 (13.5%). |
+| 5 | Confidence calibration | Top third >= 0.60 and >= 0.10 above bottom third on each seed | MET | Top-third accuracy was 0.600 each seed; gaps over bottom-third accuracy were 0.300, 0.600, and 0.500. |
 
 **Diagnoses**
 
