@@ -365,6 +365,48 @@ Eight real `claim_check` posts were called `mechanism`, while zero real
      have that can tell a LABELLING problem from a MODEL problem, and this
      section is graded on whether you used it that way. -->
 
+**Miss 1 — overall accuracy (0.400, 0.367, 0.367 vs ≥ 0.55).**
+*Cause:* a task the model can't reach from this much data and training. The
+model never got past predicting the majority label.
+*How I know:* on seeds 7 and 2024 the model predicted `mechanism` for all 30
+test posts, and 0.367 is exactly the `mechanism` share of the test split
+(11 of 30). Validation accuracy was 0.387 after every epoch on every seed.
+That is 12 of 31, the `mechanism` share of the validation split, so it never
+improved during training. Final training loss was 1.28, 1.29 and 1.28, barely
+below 1.39, the loss of a uniform guess over four labels. With 139 training
+posts at batch size 8, three epochs is only about 54 optimisation steps.
+
+**Miss 2 — macro F1 (0.238, 0.134, 0.134 vs ≥ 0.50).**
+*Cause:* the same majority-label collapse, made worse by too few examples in
+the smallest label.
+*How I know:* macro F1 averages the four labels equally, and three of them
+score 0.000 when everything is called `mechanism`. Seed 42 scored higher only
+because one of the 4 `guidance_request` test posts was predicted correctly.
+One post moved macro F1 by about 0.10 (0.238 vs 0.134), which shows how small
+the test support is.
+
+**Miss 3 — per-label F1 (`scenario` and `claim_check` 0.000 on every seed;
+`guidance_request` 0.400, 0.000, 0.000).**
+*Cause:* mainly the model problem above, not a labelling problem I can show.
+*How I know:* the confusion matrix sends every `scenario` (7) and
+`claim_check` (8) post and 3 of 4 `guidance_request` posts to `mechanism`.
+If the cause were my hardest boundary (`mechanism` vs `claim_check`), I would
+expect `claim_check` to be confused with `mechanism` while `scenario` and
+`guidance_request` were mostly right. Instead every label collapses into
+`mechanism`, which points at the model and data, not one boundary.
+
+The agreement report cannot settle the labelling question. My 100% on the
+staff set came from AI-applied labels on a clearly structured set with tight
+rules, so it is not evidence about how consistently I applied my own
+`mechanism`/`claim_check` rule. That cause remains possible but unproven:
+the model never learned enough to expose an inconsistent boundary.
+`guidance_request` has only 19 training and 4 test posts, so even a model
+that learned the task would give that label a noisy F1.
+
+**What these diagnoses point to:** more training data. A larger dataset gives
+the model more steps and more examples of the smaller labels, and a larger
+test split makes per-label F1 less sensitive to a single post.
+
 
 
 ---
