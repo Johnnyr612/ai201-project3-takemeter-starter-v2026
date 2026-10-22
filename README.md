@@ -384,7 +384,7 @@ I did not label these 30 myself. This rate therefore measures the AI's
 application of the staff rules, not mine, and it is weaker evidence about the
 consistency of my own 200 labels than a self-labelled set would be.
 
-**Agreement rate:** ___ / 30 = ___%
+**Agreement rate:** 30 / 30 = 100%
 
 <!-- Nobody grades this number. A 60% who argues every disagreement from the
      stated rules beats a 95% who wrote "staff was right" nine times. Several
@@ -406,25 +406,37 @@ consistency of my own 200 labels than a self-labelled set would be.
      written rule two different ways on 30 posts, that is direct evidence about
      what you did across your own 200. -->
 
-**1.**
-> *The post:*
->
-> *Staff said / I said:*
->
-> *My call, and why:*
->
-> *Which pile:*
+There were no disagreements, so there is nothing to sort into piles. Staff
+flagged 7 of the 30 as hard. All 7 matched, and each one is decided by a
+specific written rule:
 
-**2.**
-> *The post:*
->
-> *Staff said / I said:*
->
-> *My call, and why:*
->
-> *Which pile:*
+| Post | Label | The rule that decides it |
+|---|---|---|
+| sp_005 "Carbon plates aren't the whole story..." | `analysis` | Rule 1: the opening clause sounds like a hot take, but the two 2% drops are what the claim rests on. |
+| sp_010 "Three of us ran the same session..." | `analysis` | Rule 1: the hedged conclusion rests on a checkable observation (within 10 seconds over 5 miles). |
+| sp_014 "Times are down about 3%... so obviously..." | `hot_take` | Rule 1: the 3% is decoration. This is nearly the taxonomy's own example. |
+| sp_019 "Nobody actually enjoys the long run..." | `hot_take` | Rule 2: reflective in tone, but a general claim about everyone. |
+| sp_020 "Every injury thread... is the same injury..." | `hot_take` | Rule 1: checkable in principle, but no count is given. |
+| sp_028 "Third DNF this year..." | `reaction` | Rule 3: "third" is countable, but nothing is argued from it. |
+| sp_029 "...the shoes I set every PB in... wrong size" | `reaction` | Rule 2: the writer's own realisation, not a claim about shoes in general. |
 
 **What the pattern in my disagreements tells me:**
+
+I think the result says more about how clear this set is than about my
+consistency. The rules are tight: every hard case resolves cleanly once you
+ask rule 1's question (does the fact carry the argument?) or rule 2's (is it
+about the writer or the world?). The set is also structured: the posts run in
+blocks of ten per label (sp_001–010 `analysis`, sp_011–020 `hot_take`,
+sp_021–030 `reaction`), which makes a clean score easier. And as stated
+above, these 30 labels were applied by AI, not by me.
+
+So this 100% is not evidence that my own 200 labels were consistent. My own
+taxonomy has a looser hardest boundary (`mechanism` vs `claim_check`, decided
+by whether "correctness of a stated claim is central"), and the trained model
+sent all 8 test `claim_check` posts to `mechanism`. The staff taxonomy
+suggests what would help: a rule that names one observable test, the way rule
+1 does with "is the fact load-bearing", instead of a judgment about what is
+"central".
 
 
 
